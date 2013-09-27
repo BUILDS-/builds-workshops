@@ -1,0 +1,118 @@
+\documentclass{beamer}
+
+\title % (optional, only for long titles)
+{Introduction to Git and Github}
+\subtitle{}
+\author[Woodall, Chris] % (optional, for multiple authors)
+{Chris~Woodall [cwoodall@bu.edu]}
+\institute[BUILDS] % (optional)
+{
+  \inst{1}%
+  BUILDS\\
+  Boston University
+}
+\date[BUILDS 2013] % (optional)
+{BUILDS Tutorial Series, Fall 2013}
+\subject{Version Control}
+\usetheme{Rochester}
+\begin{document}
+
+  \frame{\titlepage}
+  \begin{frame}
+    \frametitle{What is Git?}
+    \begin{itemize}
+    	\item An unpleasant or contemptible person.
+    	\item A distributed revision control and source code management.
+    	\item Originally developed by Linus Torvalds (``creator'' of Linux) for kernel code management
+		\item Version control is any practice that tracks and provides control over changes to source code [Wikipedia, Version Control]
+		\item Other version control systems: Mercurial (hg), SVN, CVS, and GNU bazaar.
+		\item BUILDS uses Git and Github. 
+		\begin{itemize}
+			\item For example, the builds.cc website is hosted on github and
+			instead of using a blog engine, like Wordpress, we use git to push posts and updates.
+		\end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Demo \#1}
+    \framesubtitle{The basics. Now follow along!}
+
+    \begin{itemize}
+	    \item \texttt{git init}
+	    \item \texttt{git add}
+	    \item \texttt{git status}
+	    \item \texttt{git commit}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Demo \#2}
+    \framesubtitle{Branching}
+
+    \begin{itemize}
+	    \item \texttt{git branch}
+	    \item \texttt{git checkout}
+	    \item \texttt{git merge}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Github}
+    \framesubtitle{What is Github anyway?}
+
+    \begin{itemize}
+  		\item Adds a ``social'' aspect to git.
+  		\item Acts as a place to dump your code, let other people download it, improve on it, etc.
+  		\item Free for Open Source Projects.
+  		\item You can make groups (like ``BUILDS-'') for managing betweens people.
+  		\item Can fork and create pull requests.
+	    \item Go to \url{http://github.com}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Demo \#3}
+    \framesubtitle{Gitting things from the cloud.}
+
+    \begin{itemize}
+	    \item \texttt{git clone}
+	    \item \texttt{git push}
+	    \item \texttt{git pull}
+	    \item \texttt{git remote} (brief)
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Demo \#4}
+    \framesubtitle{Making a Pull Request, or, Working Together}
+
+    \begin{itemize}
+	    \item Go to \url{http://www.github.com/BUILDS-/git-tutorial-demo}
+
+	    \item Fork it!
+	    \item Clone it!
+	    \item Edit it!
+	    \item Commit it and push it!
+	    \item Submit a pull request for it!
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Eng-Git}
+    \framesubtitle{Want to be private? or have ITAR problems?}
+
+    \begin{itemize}
+  		\item Michael Abed created \url{http://eng-git.bu.edu}
+  		\item Requires you be on the BU network
+  		\item Uses SSH public keys (Github also has this feature)
+  		\item Free public or private repos with some nice features
+  		\item Best for private or ITAR compliant projects that you don't want 
+  			  to leave BU.
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Questions?}
+  \end{frame}
+\end{document}
