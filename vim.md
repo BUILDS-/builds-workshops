@@ -52,7 +52,9 @@ Navigating words:
     
 Ok, now that we've mastered the basics of navigating let's get into some more difficult things.
 
-We're going to be using a script I created for checking a website's status. Wget the file and open it up in vim like so:
+We're going to be using a script I created for checking a website's status. 
+
+Wget the file and open it up in vim like so:
 
     wget https://raw.githubusercontent.com/sean-smith/website_status/master/web_status.py
     vim web_status.py
@@ -63,11 +65,11 @@ There's another mode called visual mode that lets you select text. Simply press 
     
 Select the two lines at the top using visual mode and delete them.
 
-Whoops you made a mistake, undo the two line delete!
+Whoops you made a mistake! Undo the two line delete.
 
     u (undo)
     
-Copy the `is_website_working` function and paste another function below it.
+Copy the `is_website_working` function and paste it under function. Then change the name to `check_website`:
 
     y (copy)
     p (paste)
@@ -81,16 +83,14 @@ Useful commands:
     dd (cut a line)
     yy (copy a line)
   
-Searching:
+Search for `api_token`:
 
     :/ (searches down)
     :/\c (case insensitive search)
 
-Find and replace:
+Search and replace:
 
-    
-    
-
+    :%s/search/replace/g (search for 'search' and replace all occurences with 'replace')
 
 Kyle will now cover how to customize vim and some more advanced topics
 
