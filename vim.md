@@ -29,6 +29,28 @@ Combine these commands like so:
 
     :wq
     
-To navigate use the h,j,k,l keys like so
+To navigate use the h,j,k,l keys like so:
+
+    h (left)
+    j (down)
+    k (up)
+    l (right)
+    
+It makes more sense in a picture.
+
+![Navigating](http://www.catonmat.net/images/why-vim-uses-hjkl/adm-3a-hjkl-keyboard.jpg)
+
+Now we're going to play http://vim-adventures.com/
+
+Navigating words:
+
+    w (skips forward a word)
+    b (skips back a word)
+    e (goes to the end of the next word)
+    B (goes to the 
+    
+
+
+
 
   
