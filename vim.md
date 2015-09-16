@@ -4,5 +4,5 @@ To start out you need to understand the difference between insert mode and norma
 
 To switch into insert mode press 'i'
 
-  i
+    i
   
