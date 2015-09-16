@@ -14,20 +14,20 @@ Practice writing your first text file:
     Hello World!
     
 To exit insert mode press ESC.
-    
-    ESC
+
+    ESC (goes to normal mode)
     
 To save enter:
 
-    :w
+    :w (saves the file)
     
 To quit enter:
 
-    :q
+    :q (quits)
     
 Combine these commands like so:
 
-    :wq
+    :wq (saves and quits)
     
 To navigate use the h,j,k,l keys like so:
 
