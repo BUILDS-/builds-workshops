@@ -1,4 +1,4 @@
-==Vim Tutorial
+#Vim Tutorial
 
 To start out you need to understand the difference between insert mode and normal mode:
 
@@ -11,22 +11,24 @@ While in insert mode text you write will appear on screen like a normal editor.
 Practice writing your first text file:
 
     vim HelloWorld.txt
+    Hello World!
     
 To exit insert mode press ESC.
     
     ESC
     
-To save press:
+To save enter:
 
     :w
     
-To quit press:
+To quit enter:
 
     :q
     
 Combine these commands like so:
 
     :wq
-
+    
+To navigate use the h,j,k,l keys like so
 
   
