@@ -29,6 +29,14 @@ To install .bash_profile open it up and copy the contents into your current ~/.b
 	nano .bash_profile (copy the contents)
 	nano ~/.bash_profile (paste into here)
 
+Then refresh bash to make the changes:
+
+	source ~/.bash_profile
+
+A shortcut to this is:
+
+	. ~/.bash_profile
+
 ## Login to CSA without a password
 
 To setup login to csa without entering a password. I'm going to give the concise version of :https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
