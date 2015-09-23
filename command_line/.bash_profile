@@ -21,7 +21,7 @@ alias chrome="open -a 'Google Chrome'"
 # http://software.clapper.org/fortune/#getting_and_installing_fortune
 # Git installation: 
 # https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-alias quickgit='git add --all; git commit -am "$(fortune)"; git push; terminal-notifier -title "QuickGit Commited" -message "$(fortune)";'
+alias quickgit='git add --all; git commit -am "$(fortune)"; git push'
 
 # Add colors to folders and files when you type ls
 alias ls="ls -GFh"
