@@ -22,6 +22,18 @@ To install the `.tmux.conf`:
 
 	cp .tmux.conf ~/
 
+Then refresh tmux:
+
+	tmux source-file ~/.tmux.conf
+
+Now start a tmux session with:
+
+	tmux
+	Ctrl-a - (split diagonally)
+	Ctrl-a | (split vertically)
+	Ctrl-a [Arrow_key] (move between panes)
+	exit (quits tmux)
+
 ## Install a new .bash_profile
 
 To install .bash_profile open it up and copy the contents into your current ~/.bash_profile
