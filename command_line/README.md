@@ -68,6 +68,58 @@ Try and login to your csa account.
 
 You shouldn't be prompted for a username.
 
+## Create a shortcut for Sublime Text 3
+
+It would be great if you could switch from the command to Sublime really quickly right?
+
+Enter the following:
+
+	ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+
+Then you can easily launch sublime
+
+	subl (opens last window)
+	subl . (opens current folder)
+	subl README.md (open this README in sublime)
+
+## Install lolcat and fortune
+
+You need Ruby gem installer to install lolcat. To install gem:
+
+	wget https://rubygems.org/rubygems/rubygems-2.4.8.zip
+	unzip rubygems-2.4.8.zip
+	cd rubygems-2.4.8
+	sudo ruby setup.rb
+
+Then you can install lolcat:
+
+	gem install lolcat
+
+And colorize text super easily:
+
+	echo "I'm full of colors" | lolcat
+
+## Install fortune
+
+You'll need pip, to install pip go here: https://pip.pypa.io/en/stable/installing/
+
+Then you can just do:
+
+	pip install fortune
+
+## Install cowsay
+
+Install the following:
+	install.packages("devtools")
+	devtools::install_github("sckott/cowsay")
+
+## Putting it all together
+
+Type the following for interesting quotes:
+
+	fortune | cowsay | lolcat
+
+Learn tmux for awesome window splitting!
 
 Enjoy!
 
