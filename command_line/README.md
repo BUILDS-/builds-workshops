@@ -7,11 +7,11 @@ This folder contains the following hidden files:
 
 To see these files, clone the git repo:
 
-	git clone
+	git clone https://github.com/BUILDS-/builds-workshops.git
 
 Then type:
 
-	cd 
+	cd builds-workshops/command_line
 	ls -la
 
 That will show you the hidden files
