@@ -1,4 +1,4 @@
-#Cheat Sheet
+#Command Line Cheat Sheet
 
 ###Navigation
 
