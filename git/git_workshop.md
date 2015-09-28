@@ -4,4 +4,5 @@ Git (and Github) is an awesome tool for sharing code, version control, and more!
 
 ### First Steps
 
-Go to (https://github.com/join)[https://github.com/join] and create an account if you haven't already!
+1.) Go to [https://github.com/join](https://github.com/join) and create an account if you haven't already!
+2.) Try creating your own repo!
