@@ -18,7 +18,7 @@ Git (and Github) is an awesome tool for sharing code, version control, and more!
     - Click "New"
 
 
-![alt text](http://i.imgur.com/M5qDJz2.png)
+![alt text](http://i.imgur.com/5RWZHX3.png)
 
 - Click Create!
 - Now follow the instructions as follows:
