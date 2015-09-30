@@ -16,6 +16,7 @@ Git (and Github) is an awesome tool for sharing code, version control, and more!
     - Go to the top right and click on your profile
     - Click on "Repositories"
     - Click "New"
+    - __Name it: "(YOUR USERNAME).github.io"
 
 
 ![alt text](http://i.imgur.com/5RWZHX3.png)
