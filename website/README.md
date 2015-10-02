@@ -6,11 +6,11 @@
 
 2. In the top bar of github click: 
 
-	+ > New repository
+	`+ > New repository`
 
 3. Title your repository:
 
-	[github_username].gihub.io
+	`[github_username].gihub.io`
 
 4. Add a file called index.html
 
@@ -20,7 +20,7 @@
 
 1. Go to https://nc.me
 
-2. Find a domain and click `Add` the click complete order
+2. Find a domain and click `Add` then click `Complete Order`
 
 3. Enter your bu email on the next page and click continue
 
@@ -28,19 +28,19 @@
 
 5. Create a new record:
 
-	Record Type: A
+	`Record Type: A
 	Host: @
 	IP Address: 192.30.252.154
 	TTL: Automatic
-	Name: github pages
+	Name: github pages`
 
 6. Create another record with the same parameters except the ip should be:
 
-	192.30.252.153
+	`192.30.252.153`
 
 7. Go back to the github repo and create a file called CNAME with the contents:
 
-	yourdomain.me
+	`yourdomain.me`
 
 8. Open up http://yourdomain.me, you should now see your website!
 
