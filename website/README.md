@@ -28,11 +28,11 @@
 
 5. Create a new record:
 
-	`Record Type: A
+	```Record Type: A
 	Host: @
 	IP Address: 192.30.252.154
 	TTL: Automatic
-	Name: github pages`
+	Name: github pages```
 
 6. Create another record with the same parameters except the ip should be:
 
@@ -54,10 +54,11 @@ https://education.github.com/pack
 
 Ours favorites are:
 
-* ATOM -- A super powerful open source editor that solves the "Pay for sublime" window
+* **ATOM** -- A super powerful open source editor that solves the "Pay for sublime" window
 
-* Digital Ocean -- Get your own server, for free!
+* **Digital Ocean** -- Get your own server, for free!
 
-* Github -- Free private repos allow you to keep your class assignments on github
+* **Github** -- Free private repos allow you to keep your class assignments on github
 
+* **NameCheap** -- Free domains and free ssl certificates. 
 
