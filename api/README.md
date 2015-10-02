@@ -20,7 +20,7 @@ So what does have a RESTFUL API actually mean?
 RESTFUL is a word typically used to describe API's, in plain terms it means that you abide by some standards that are defined below. It is a bit hard to describe REST (represenatational state transfer) as the web is built using RESTFUL principles so many things we take for granted are actually defined by the REST standard. Here's a brief overview: 
 
 A RESTFUL API will have the following properties:
- * Base URI which in this case is http://api.seanssmith.me/
+ * Base URI which in this case is http://api.seanssmith.com/
  * Uses an internet media type in this case JSON
  * Uses standard HTTP methods (I'll talk about these later)
  * Stateless 
@@ -33,7 +33,7 @@ HTTP has a few verbs that are standardized. Many languages and different platfor
 
 Verb | Meaning
 ---- | ---
-GET | This is what your browser is doing when you request google.com, it simply means get information at this resource. The URI should indicate what you're retreiving. For example ```GET http://api.seanssmith.me/time``` should return the current time.
+GET | This is what your browser is doing when you request google.com, it simply means get information at this resource. The URI should indicate what you're retreiving. For example ```GET http://api.seanssmith.com/time``` should return the current time.
 HEAD | This is the exact same as the GET request except it doesn't return the body of the request. It only returns the header information which includes status codes and content type. 
 POST | Tells the server to accept some information that is given in the message body. 
 PUT | Update some information that is already there.
@@ -48,7 +48,7 @@ Status Code | Meaning
 ----------- | -----------
 200       |  All Good :)
 302       |  We found the resource but at a different URI. Let me direct you there.
-400       |  Bad request -- a client problem. For example calling ```GET http://api.seanssmith.me/tiem```
+400       |  Bad request -- a client problem. For example calling ```GET http://api.seanssmith.com/tiem```
 403       | Forbidden -- You do not have access to this resource. 
 404       | Not Found, this is when you request some info that doesn't exist
 500       | Internal server error -- as the name says usually not your issue
@@ -64,7 +64,7 @@ The structure of a url is as follows:
 <scheme>://<username>:<password>@<host>:<port>/<path>;<parameters>?<query>#<fragment>
 ```
 
-Most of that isn't actually used in a api request. Typically you request some ```scheme``` usually ```http``` or ```https``` with some ```host``` for example ```seanssmith.me```. In this case I'm using a ```subdomain``` ```api.seanssmith.me``` as my personal site is running on http://seanssmith.me. You specify some path, which in the case of a RESTFUL API is a resource, and you specify some parameters. 
+Most of that isn't actually used in a api request. Typically you request some ```scheme``` usually ```http``` or ```https``` with some ```host``` for example ```seanssmith.com```. In this case I'm using a ```subdomain``` ```api.seanssmith.com``` as my personal site is running on http://seanssmith.com. You specify some path, which in the case of a RESTFUL API is a resource, and you specify some parameters. 
 
 The arguments of a URL are where it becomes interesting. You can include key value pair arguments in a uri.
 
@@ -144,8 +144,8 @@ Connection:keep-alive
 Content-Length:52
 Content-Type:application/x-www-form-urlencoded; charset=UTF-8
 Host:cs-people.bu.edu
-Origin:http://seanssmith.me
-Referer:http://seanssmith.me/contact.html
+Origin:http://seanssmith.com
+Referer:http://seanssmith.com/contact.html
 User-Agent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.115 Safari/537.36
 Form Dataview parsed
 ```
@@ -184,7 +184,7 @@ password: nP?U6U7k}u
 ```
 
 
-The absolute url is ```http://api.seanssmith.me/```
+The absolute url is ```http://api.seanssmith.com/```
 
 The API has the following relative endpoints:
 
