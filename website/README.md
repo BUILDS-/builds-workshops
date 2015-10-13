@@ -14,7 +14,7 @@
 
 4. Add a file called index.html, copy it from this repo.
 
-5. Open up the page in your web browser by double clicking the file. 
+5. Open up the page in your web browser by double clicking the file. See my webpage http://cs-people.bu.edu/swsmith for an example 
 
 6. Change all the occurences of `Your Name` to your name.
 
