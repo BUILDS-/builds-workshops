@@ -10,6 +10,6 @@ No knowledge of programming is necessary. Just bring your computer and a lot of 
 
 Checkout some good looking examples from BUILDS members (including yours truly):
 
-http://huyle.me/
-http://nicohinderling.me/
-http://seanssmith.me/
+* http://huyle.me/
+* http://nicohinderling.me/
+* http://seanssmith.me/
