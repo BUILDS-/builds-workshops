@@ -37,11 +37,11 @@
 
 5. Create a new record:
 
-	```Record Type: A
+	Record Type: A
 	Host: @
 	IP Address: 192.30.252.154
 	TTL: Automatic
-	Name: github pages```
+	Name: github pages
 
 6. Create another record with the same parameters except the ip should be:
 
