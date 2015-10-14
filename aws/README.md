@@ -38,13 +38,18 @@ For this guide, we will be loosely following along with this [guide](http://www.
 - Once you complete the key pair setup, the instance will launch and you can press "View instances" to see the management interface for your new server.
 	- This view allows you to restart or power-on/off the machine, and see information about connecting to the server.
 
-### Elastic IP:
+### Elastic IP & The Security Group:
 - On the left side of the management interface you should see a list of some additional services for your new EC2 instance.
 	- We are going to configure one of them now, Elastic IPs.
 - Elastic IPs are a system provided by AWS to ensure that the IP of your server does not change, or more accurately that there is an IP that you can use to connect to the server at all times (even after a reboot).
 	- Configuring an Elastic IP is fairly straightforward, simply go to the Elastic IPs menu and click "allocate new address"
 	- Once you have allocated an address, now you simply click "Actions->Allocate Address" and select your instance in the "allocate to instance" box.
 	- This will change the IP of your instance, but it will now be forever accessible at the new address you have allocated and assigned.
+- In addition to Elastic IP, we have to make modifications to the security group that we selected for our server to allow ssh access and HTTP/HTTPS connectivity.
+	- To do this, go to the "Security Groups" menu on the left side
+	- Then select "default"
+	- Navigate to the "Inbound" tab on the bottom center and press Edit.
+	- From here, add rules for SSH, HTTP, and HTTPS (which can be found in the dropdown menu).
 
 ### SSH & Package Management:
 - Most of you will have used SSH before, but there are some important things that change when accessing or using your own Virtual Private Server (VPS).
