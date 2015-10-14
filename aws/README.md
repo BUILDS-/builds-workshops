@@ -30,13 +30,14 @@ For this guide, we will be loosely following along with this [guide](http://www.
 		- Now we can Launch our new Instance!
 
 ### We have a Server! Now what?
-- Now we connect to it.
+- Now we prepare authentication to connect to it.
 	- This requires creating a public/private key pair.
 	- When you launch the instance you will be prompted to create or select a key pair.
 		- Simply select "Create a new key pair" from the dropdown menu, type in a name, and download the .pem file
 	- This file will be the key to connecting to your new server. EC2 Instances by default are not accessible via username and password, only via this .pem file.
 - Once you complete the key pair setup, the instance will launch and you can press "View instances" to see the management interface for your new server.
 	- This view allows you to restart or power-on/off the machine, and see information about connecting to the server.
+	- On the left side of this view, you see many supplemental services available to be configured and used with your server.
 
 ### Elastic IP & The Security Group:
 - On the left side of the management interface you should see a list of some additional services for your new EC2 instance.
