@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('../assets/fonts/titillium_web/TitilliumWeb-Regular.ttf');
+}
+
+.all-repos {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 3%;
+}
+
+.back {
+    position: absolute;
+    margin: 1em 1em;
+    z-index: 9999;
+}
+
+.backg {
+    height: 100%;
+    min-height: 700px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 11%;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.big-search {
+    margin: 0 auto;
+    margin-top: 8%;
+    width: 52%;
+}
+
+.big-title {
+    margin-bottom: 1.2em;
+}
+
+.biggest-repos {
+    border: 2px solid lightgray;
+    display: inline-block;
+    font-size: 2em;
+    height: calc(1.2em + 400px + 2.2em);
+    min-width: 400px;
+    padding: 1em 1em;
+}
+
+body {
+    font-family: Titillium Web;
+    min-width: 1200px;
+    font-size: 100%;
+}
+
+.btn-search {
+    background-color: #f8a543;
+    width: 120px;
+}
+
+.btn-search:focus {
+    background-color: #E29F50;
+    outline: none;
+}
+.btn-search:hover {
+    background-color: #E29F50;
+}
+
+.commits {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.doughnut-head {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 1em;
+}
+
+.full-name {
+    font-size: 3em;
+    margin-top: -10px;
+    color: white;
+    text-shadow: 1px 1px darkgrey;
+}
+
+.graphs {
+    background-color: white;
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding: 0 0;
+    position: relative;
+}
+
+.headstuff {
+    color: white;
+    font-size: 1.8em;
+    margin-top: 2%;
+}
+
+.hide-this {
+    text-align: center;
+}
+
+.ind-repo-0-bits {
+    float: right;
+}
+
+.ind-repo-1-bits {
+    float: right;
+}
+
+.ind-repo-2-bits {
+    float: right;
+}
+
+.languages-doughnut {
+    /*float: right;*/
+    display: inline-block;
+}
+
+
+#loader {
+    width: 20%;
+    font-size: 5em;
+    margin-top: 10%;
+    margin-left: 40%;
+}
+
+.loader {
+    display: inline-block;
+    font-size: 4em;
+    margin-top: 5%;
+}
+
+.logo {
+    text-shadow: 1px 1px #000000;
+    font-size: 7em;
+    color: white;
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.num-repos {
+    font-size: 2.3em;
+    color: black;
+}
+
+.num-commits {
+    font-size: 2.3em;
+    color: black;
+}
+
+.num-bytes {
+    font-size: 2.3em;
+    color: black;
+}
+
+.OCTOCAT {
+    margin-top: 4%;
+}
+
+.prof {
+    border: 5px solid white;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    box-shadow: 1px 1px 0 darkgrey;
+    display: absolute;
+    height: 180px;
+    margin: 8% auto;
+    width: 180px;
+}
+
+.repo-0 {
+    padding-left: 15px;
+    margin-bottom: 1em;
+}
+.repo-1 {
+    padding-left: 15px;
+    margin-bottom: 1em;
+}
+.repo-2 {
+    padding-left: 15px;
+    margin-bottom: 1em;
+}
+
+.repos, .commits, .lines {
+    background-color: white;
+    box-shadow: 1px 1px 0 darkgrey;
+    color: #717171;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    font-size: 1em;
+    height: 13%;
+    justify-content: center;
+    margin-top: 30px;
+    width: 30%;
+}
+
+.searchbar {
+    height: 4em;
+}
+
+.search-text {
+    display: table-cell;
+    width: 40%;
+}
+
+.smaller {
+    display: inline;
+    font-size: 60%;
+}
+
+.splash {
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+
+}
+
+.stats {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+}
+
+.top-header {
+    top: 0;
+    height: 80%;
+    background-image: url('../assets/img/Background2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.week {
+    text-align: center;
+}
+
+.week-avg {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: strong;
+
+}
+
+#weekday-dist {
+    width: 1000px;
+    height: 400px;
+    padding-bottom: 20px;
+}

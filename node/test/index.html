@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+    -->
+    <title>KH</title>
+    <script type="text/javascript" src="index.js"></script>
+
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+<div id="column-1">
+<div class="profile"></div>
+<div class="name">
+    Kyle Holzinger
+</div>
+
+<hr class="divider" />
+
+<div class="navigation">
+    <a class="link" onclick="showBlog()" href="#blog"><div class="blog link active-link"><div class="nav-arrow">></div> <div class="nav-link">Blog</div></div></a>
+    <a class="link" onclick="showProjects()" href="#projects"><div class="projects link"><div class="nav-arrow">></div>  <div class="nav-link">Projects</div></div></a>
+    <a target="_blank" class="link" href="Resume.pdf"><div class="resume link"><div class="nav-arrow">></div>  <div class="nav-link">Resume</div></div></a>
+    <a target="_blank" class="link" href="mailto:holzinger.kyle@gmail.com"><div class="contact link"><div class="nav-arrow">></div> <div class="nav-link">Contact</div></div></a>
+</div>
+
+
+<div class="social-wrapper">
+<div class="social">
+<a target="_blank" href="https://www.facebook.com/Kyle.Holzinger"><i class="fa fa-facebook fa-2x"></i></a>
+<a target="_blank" href="https://twitter.com/kyleholzinger"><i class="fa fa-twitter fa-2x"></i></a>
+<a target="_blank" href="https://github.com/KyleLH"><i class="fa fa-github fa-2x"></i></a>
+</div>
+</div>
+</div>
+<div id="column-2" >
+    
+    <div class="menu-button-wrapper">
+        <i id="menu-button" class="fa fa-bars" onclick="toggleMenu()"> <div class="menu-text"> Menu </div></i>
+    </div>
+    <div id="Blog" class="active">
+        <div class="c2-title">
+            Blog
+            <hr />
+        </div>
+        <script src="http://customosx.tumblr.com/js"></script>
+    </div>
+
+    <div id="Projects" class="none">
+        <div class="c2-title">
+            Projects
+            <hr />
+        </div>
+        <div class="content-card" id="GitMeCard">
+            <a href="http://kylelh.me/GitMe/" target="_blank"><img class="gitmeMock" src="assets/images/GitMe.png" /></a>
+            <div class="card-description">
+                <div class="card-headline">GitMe</div>
+                <div class="card-jobs">Front-end Development - Interaction Design</div>
+            </div>
+        </div>
+        <div class="content-card" id="CollabCard">
+            <a href="http://github.com/KyleLH/Collab" target="_blank"><img class="collabMock" src="assets/images/Collab.png"></a>
+            <div class="card-description">
+                <div class="card-headline">Collab.vim</div>
+                <div class="card-jobs">Back-end Development - Vim Integration - Infrastructure Manager</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+
+</html>
