@@ -37,7 +37,34 @@ If you take a more complicated tree such as:
                /  \
 	     	 -2    7
            	/  \     
-	 	  8     -4    
+	 	   8   -4    
+
+This tree should return `23` which is the path through `8 -> -2 -> 10 -> 7`. Now if we replace `-4` with `18`. 
+
+
+
+You'll notice that for each parent node you need to decide if you want to include that node or not.
+
+
+	int max_path(Node n) {
+
+		int parent = n.value + left_right(n.left) + left_right(n.right);
+		int left = max_path(n.left)
+		int right = max_path(n.right)
+
+		return max(parent, left, right)
+	}
+
+	int left_right(Node n) {
+		if (n == NULL) {
+			return 0;
+		} else {
+			int left = n.value + left_right(n.left);
+			int right = n.value + left_right(n.right);
+			return left > right ? left : right;
+		}
+	}
+
 
 
 ### Dynamic Programming
