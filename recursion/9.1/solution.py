@@ -24,11 +24,11 @@ def staircase_dynamic(n):
 	if saved_paths[n]:
 		return saved_paths[n]
 	if n > 0:
-		paths += staircase(n - 1)
+		paths += staircase_dynamic(n - 1)
 	if n > 1:
-		paths += staircase(n - 2)
+		paths += staircase_dynamic(n - 2)
 	if n > 2:
-		paths += staircase(n - 3)
+		paths += staircase_dynamic(n - 3)
 	saved_paths[n] = paths;
 	return saved_paths[n]
 
