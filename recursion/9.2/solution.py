@@ -23,9 +23,9 @@ def robot_traverse_dynamic(x, y):
 	if saved_paths[y][x]:
 		return saved_paths[y][x]
 	if x < X:
-		paths += robot_traverse(x+1, y)
+		paths += robot_traverse_dynamic(x+1, y)
 	if y < Y:
-		paths += robot_traverse(x, y+1)
+		paths += robot_traverse_dynamic(x, y+1)
 	saved_paths[y][x] = paths;
 	return saved_paths[y][x]
 
