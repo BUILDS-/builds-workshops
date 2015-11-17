@@ -31,5 +31,13 @@ Given a binary tree find the maximum path sum. A path can start and end at any n
       / \
      2   3
 
+If you take a more complicated tree such as:
+
+                10
+               /  \
+	     	 -2    7
+           	/  \     
+	 	  8     -4    
+
 
 ### Dynamic Programming
