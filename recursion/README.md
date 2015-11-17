@@ -101,3 +101,25 @@ A simple dynamic programming solution looks like the follwoing:
 This keeps a global variable fib that keeps track of the fibonnacci number at the i-th iteration.
 
 ## Problems
+
+These problems come from Cracking the Coding Interview version 5 and solutions can be found in the corresponding folders.
+
+### 9.1
+
+A child is running up a staircase with n steps, and can hop either 1 step, 2 steps, or 3 steps at a time. Implement a method to how many possible ways the child can run up the stairs.
+
+### 9.2
+
+Imagine a robot sitting in the upper left hand corner (0, 0) of an X by Y grid. The robot can only move in two directions, right and down. How many possible paths can the robot move to (X, Y)?
+
+Consider the following image:
+
+![Possible Paths](https://octodex.github.com/images/yaktocat.png)
+
+### 9.5
+
+Write a method to compute all permutations of a string.
+
+### 9.7
+
+Implement a "paint fill" function that that one may see on many popular image editing programs. That is given a screen (represented by a 2D array), a point, and a new color, fill the screen so that every pixel is the new color.
