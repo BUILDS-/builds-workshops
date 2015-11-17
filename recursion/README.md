@@ -23,7 +23,13 @@ The bottom up way to think about this is `x + rest(x)` that is for each x you're
 
 ### Top down Approach
 
-The top down approach is a completely different way of thinking about recusrion. It is 
+The top down approach is a completely different way of thinking about recusrion. It relies on the central question: Should I pick this or that? We'll implement a problem to illustrate this thinking.
+
+Given a binary tree find the maximum path sum. A path can start and end at any node. For example the below tree would return 6.
+
+   	   1
+      / \
+     2   3
 
 
 ### Dynamic Programming
