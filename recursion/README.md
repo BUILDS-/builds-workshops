@@ -114,7 +114,7 @@ Imagine a robot sitting in the upper left hand corner (0, 0) of an X by Y grid. 
 
 Consider the following image:
 
-![Possible Paths](https://octodex.github.com/images/yaktocat.png)
+![Possible Paths](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/recursion/9.2/robot_paths.png)
 
 ### 9.5
 
