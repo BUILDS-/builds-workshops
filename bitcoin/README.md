@@ -23,3 +23,19 @@ Every bitcoin wallet has an address. The address is a unique identifier that all
 The blockchain is analagous to a database that your bank maintains. It stores every transaction. The difference is every bitcoin node contains a copy of the blockchain. Right now it's about 20 gigs worth of information and continues to grow daily.
 
 The blockchain contains a record of every transaction ever. With the popularity of web based services such as Coinbase, fewer people 
+
+### Setup a wallet
+
+To setup a wallet please go here: https://blockchain.info/wallet
+
+Create an account and I'll then transfer a millibitcoin (10^-3 BTC or .0001 BTC) to your account. 
+
+You need to give me your wallet address here: https://docs.google.com/forms/d/1SJUjoy176HGqcqdgBGqOocXxDiqe1XrZaR79VcE-59U/viewform
+
+You can then donate that amount to a charity that accepts bitcoin.
+
+You can find a list of charities here:
+http://bitcoin100.org/charities/
+
+Congrats you've made your first bitcoin transaction!
+
