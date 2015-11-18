@@ -17,6 +17,11 @@ The wallet is like your debit card, it contains a unique public key (like a cred
 ###### Wallet Address
 Every bitcoin wallet has an address. The address is a unique identifier that allows you to send money to that address `1JArS6jzE3AJ9sZ3aFij1BmTcpFGgN86hA`. 
 
+###### Private Key
+Every wallet has a private key, the private key allows you to send bitcoin. In Bitcoin, a private key is usually a 256-bit number (some newer wallets may use between 128 and 512 bits), which can be represented one of several ways. Here is a private key in hexadecimal - 256 bits in hexadecimal is 32 bytes, or 64 characters in the range 0-9 or A-F.
+
+	E9 87 3D 79 C6 D8 7D C0 FB 6A 57 78 63 33 89 F4 45 32 13 30 3D A6 1F 20 BD 67 FC 23 3A A3 32 62
+
 
 ### The Blockchain
 
