@@ -5,7 +5,7 @@
 In non-technical language, Bitcoin is a digital currency in which transactions can be performed without the need for a credit card or central bank. It's designed to enable users to send money over the Internet in a very simple and efficient way.
 
 The original paper published by Satoshi Nakamoto is linked here:
-![Bitcoin paper](https://bitcoin.org/bitcoin.pdf) 
+https://bitcoin.org/bitcoin.pdf
 
 
 Bitcoin is comprised of two parts, the wallet and the blockchain.
