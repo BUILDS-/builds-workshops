@@ -14,3 +14,32 @@ Two awesome installation guides for reference:
 
 - [https://github.com/RetroPie/RetroPie-Setup/wiki/first-installation](https://github.com/RetroPie/RetroPie-Setup/wiki/first-installation)
 - [https://supernintendopi.wordpress.com/](https://supernintendopi.wordpress.com/)
+
+
+**Recommended Emulator Controls (with Keyboard):"**
+
+Tip: *To skip an input, just hold a button you've already bound*
+
+- D-pad: Arrow Keys
+
+- Start: Enter
+
+- Select: Shift
+
+- A: U key
+
+- B: I key
+
+- X: O key
+
+- Y: P Key
+
+- Left Bottom & Right Bottom: **Ignore**
+
+- Left Top: Q key
+
+- Right Top: E key
+
+- Left Thumb & Right Thumb: **Ignore**
+
+- Analog Stick: W A S D Keys
