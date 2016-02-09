@@ -46,3 +46,9 @@ Tip: *To skip an input, just hold a button you've already bound*
 
 
 Here are a few [ROMs](https://drive.google.com/folderview?id=0B8dSWWttT6cEUDZpcWRJUDVhZEE&usp=sharing) that I downloaded myself if you're interested!
+
+If you want to play Gameboy Advanced games, you'll need to add the gba_bios.bin file I've put in the link above. [Here](https://weekendengineer.wordpress.com/2014/09/08/setting-up-gameboy-advance-for-retropie/) is the guide I used for reference. I believe you just need to put it in the following directory:
+
+```
+$ /opt/retropie/emulators/gpsp/
+```
