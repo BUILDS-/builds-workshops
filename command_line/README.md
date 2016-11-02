@@ -1,20 +1,129 @@
-# Resources for Intro to Command line
+# Intro to Command line
 
-This folder contains the following hidden files:
+The command line is a integral tool for development. If just want to look cool, open http://hackertyper.net/ and leave this workshop.
+
+Let's learn basic navigation and file editing.
+
+This repo contains some resources we'll need for this workshop so the first step is to clone this repo. You can open up a terminal and type:
+
+	$ git clone 
+
+Note the `$` is used to denote a shell prompt and should not be typed in.
+
+### Folder Structure
+
+Linux machines all have file paths that start from root or `/`, if you type in `pwd` you'll see the current working directory. Likely if you've just opened your shell you'll be in what's called the home directory.
+
+	$ pwd
+	/home/username
+
+This directory on mac is `/Users/[Username]` where `[Username]` is your username. On linux it's usually `/home/[username]`. Since the home directory is accessed a lot it's shortened to `~`. From now on we'll refer to folder as directory and we'll call your home directory `/home/username`. 
+
+To see the files in the current directory just type `ls`, this lists files in your current working directory. You'll see the `command_line` folder we cloned earlier. You'll also see some of your own files:
+
+	$ ls
+	command_line
+
+Now let's learn a new command `cd`. This moves between folders, so let's say I type:
+
+	$ cd ~
+
+That will navigate to my home directory. I can now type:
+
+	$ pwd
+	/home/username
+
+To see the directory you're currently in. Ok, Let's go into the `me/` directory and type `ls` to get the following folder structure.
+
+
+	$ cd command_line/me
+	$ ls
+	me/
+		hello.txt
+		projects/
+			supersecretproject.txt
+
+Oh look! There's a super secret file. How do I view that? I do the following:
+
+	$ cd projects
+	$ cat supersecretproject.txt
+
+I used a new command `cat` which simply prints the contents of a file. Let's go and change the name of that file. To do this we can use the `mv` (move) command which is the way you rename files.
+
+	$ mv supersecretproject.txt notsosecretanymore.txt
+
+Ok, we've learned a lot so let me recap.
+
+#### ls
+List the files and directories in a your current working directory.
+
+	$ ls
+	hello.txt projects
+
+#### pwd
+List the current working directory
+
+	$ pwd
+	/home/username/command_line/me
+
+#### cd
+Move into different folders
+
+	$ cd projects
+
+#### cat
+Print out the contents of a file.
+
+	$ cat supersecretproject.txt
+
+#### mv
+Rename or move a file
+
+	$ mv supersecretproject.txt notsosecretanymore.txt
+
+### Hidden Files
+
+Some files in unix based systems are hidden. Hidden files start with a `.`, to see them type `ls -a` the `-a` is what's called a flag. It's used to denote special options for a command. First let's make sure we're in the projects directory.
+
+	$ pwd
+	/home/username/command_line/me/projects
+	$ ls -a
+	.                           .betyoudidntseethisfile.txt
+	..                          supersecretproject.txt
+
+Wow! We have three secret files. You'll notice there are two secret files that are just `.` and `..`, these files are actually directories!
+
+The `.` directory is the current directory. If you type:
+
+	$ pwd
+	/home/username/command_line/me/projects
+	$ cd .
+	$ pwd
+	/home/username/command_line/me/projects
+
+You'll notice you didn't go anywhere! This is because you changed directories into the current directory.
+
+The next directory `..` is used to denote one directory up. Let's test it out:
+
+	$ cd ..
+	$ pwd
+	/home/username/command_line/me
+
+We've moved one directory up! Now let's address the elephant in the room, `.betyoudidntseethisfile.txt`. Let's cat it out.
+
+	$ cd projects
+	$ cat .betyoudidntseethisfile.txt
+
+Wow! It's so easy to hide files in unix based systems.
+
+Now let's move onto more advanced topics.
+
+### Tmux and Shortcuts
+
+Go to the `command_line/` folder you cloned earlier and do an `ls -a`. This folder contains the following hidden files:
 
 	.bash_profile
 	.tmux.conf
-
-To see these files, clone the git repo:
-
-	git clone https://github.com/BUILDS-/builds-workshops.git
-
-Then type:
-
-	cd builds-workshops/command_line
-	ls -la
-
-That will show you the hidden files
 
 ## Configure tmux
 
