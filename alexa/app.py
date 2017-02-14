@@ -55,7 +55,7 @@ def get_welcome_response():
                     "When's the next rocket Launch? or Is there a launch on Sunday?"
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
-    reprompt_text = "Please ask me about Rockets by saying" \
+    reprompt_text = "Please ask me about Rockets by saying " \
                     "When's the next rocket Launch? or Is there a launch on Sunday?"
     should_end_session = False
     return build_response(session_attributes, build_speechlet_response(
@@ -64,7 +64,7 @@ def get_welcome_response():
 
 def handle_session_end_request():
     card_title = "Goodbye!"
-    speech_output = " What is a spaceman’s favorite chocolate?" \
+    speech_output = " What is a spacemans favorite chocolate?" \
         "A marsbar!" \
         "Goodbye!"
     # Setting this to true ends the session and exits the skill.

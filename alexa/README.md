@@ -14,7 +14,14 @@ Let's first create an AWS Lambda function, a Lambda function is a script that ge
 6. Enter Description `Gets next rocket launch`
 7. Change runtime to `Python 2.7`
 8. Paste code from `app.py` into the text box
-9. 
+9. Keep "Handler" as `lambda_function.lambda_handler` (this is the function name that gets called when your skill is invoked)
+10. Role: `Create custom role`
+11. In the popup that pops up, keep "IAM Role" as `lambda_basic_execution` and then click allow.
+12. On the previous screen (IAM should automatically close after clicking allow), leave the rest of the settings as default and click "Next"
+13. Click "Create Function"
+14. On the next screen click "Test" and from the test code scroll down to "Alexa Start Session"
+15. If everything succeeds you'll see a green check.
+16. Copy the ARN in the upper right it should look like: `arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:RocketSkill`
 
 Now that we've setup and tested our lambda function, we need to 
 
@@ -25,11 +32,11 @@ Now that we've setup and tested our lambda function, we need to
 5. Click "Add New Skill"
 6. Leave Skill Type as `Custom Interaction Model`
 7. Change name to `Rocket Launch Schedule`
-8. Change invocation name to `Rocket Launch`
+8. Change invocation name to `Rocket Schedule`
 9. Select no on Audio Player
 10. Click Next
 11. 
-4. Copy the Lambda ARN (Amazon Resource Name) from the upper right of your lambda function, it should look like ``
+4. Paste the Lambda ARN (Amazon Resource Name) from the upper right of your lambda function, it should look like `arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:RocketSkill`
 
 
 ## Useful Links
