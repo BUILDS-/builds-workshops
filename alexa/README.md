@@ -1,5 +1,7 @@
 # Alexa Skills Development Workshop
 
+We'll be going over slides posted [here](https://docs.google.com/presentation/d/1zQaEmL9bZSCOJkkEwQIDcvaGVN4v3rexfohPQlLqWfI/pub?start=false&loop=false&delayms=60000), then following the rest of this readme to setup the skill. It's important to understand the slides before setting up a skill.
+
 First everyone needs to sign up for an AWS account. The easiest way to do so for students is to sign up for the [Github Student Developer Pack](https://education.github.com/pack).
 
 If you're not a student or don't want free AWS credit, make an AWS account [here](https://aws.amazon.com/). To do so you'll need a credit card (which you don't need if you use the github pack).
