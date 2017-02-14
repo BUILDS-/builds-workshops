@@ -83,7 +83,7 @@ def get_next_rockets(intent, session):
     should_end_session = True
 
     return build_response(session_attributes, build_speechlet_response(
-        card_title, speech_output, reprompt_text, should_end_session))
+        card_title, speech_output, None, should_end_session))
 
 
 def get_rocket_on_date(intent, session):
@@ -100,7 +100,7 @@ def get_rocket_on_date(intent, session):
         speech_output = "February 18: SpaceX will launch a Falcon 9 rocket carrying the Dragon spacecraft on a cargo delivery mission (CRS 10) from the Kennedy Space Center in Florida to the International Space Station at 10:01 a.m. EST."
 
         return build_response(session_attributes, build_speechlet_response(
-            card_title, speech_output, reprompt_text, should_end_session))
+            card_title, speech_output, None, should_end_session))
     else:
         return get_next_rockets(intent, session)
 
