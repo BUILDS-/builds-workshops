@@ -50,11 +50,11 @@ Now I click "Accept Map," and we're brought to the main editing window. This is 
 
 You can move around the map by right-clicking and dragging, and you can zoom with the mousewheel or trackpad. To your right is the toolbar with all the map-editing tools. If you left-click on a hex tile, you can edit it here--changing its terrain type, what kind of resources and features it has, natural wonders, et cetera. You can also specify a tile as a starting point for a random player or city-state. If you don't feel like being *that* granular, you can use the "Paint" tab to do things in batch, or the "Plopper" tab for terrain features. If you want to randomize the world's resources, go to the "Misc" tab and select "Scatter resources." You can add rivers here too, and define continental borders. All this stuff is fairly self-explanatory, so go out and have fun with it!
 
-For demonstration's sake, I'm going to focus on a small island on my map and plop salt all over.
+For demonstration's sake, I'm going to focus on a small island on my map and plop salt all over. You should take more time than I did, though--this is the creative part of making the mod. Go crazy!
 
 ![Salty.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/salty.png)
 
-As-is, we can take this map, save it (top right corner), and play it like any other saved map in Civ 5, with random leaders and start points. The next step is more granular control of how your game will actually play out, and that's where we get into scenarios.
+As-is, we can take this map, save it (top left corner), and play it like any other saved map in Civ 5, with random leaders and start points. The next step is more granular control of how your game will actually play out, and that's where we get into scenarios.
 
 To start editing your scenario, look on the top toolbar for the "Scenario Editor." Once you're in, you should see this:
 
