@@ -12,11 +12,11 @@ We'll start with a fairly simple yet fun Civ 5 mod: how to make your own custom 
 
 Before we start, we need to get the Civ 5 SDK from Steam. You can find it by mousing over "Library" and finding "Tools" in the dropdown. 
 
-![Click on "Tools."](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/nav-to-tools.png)
+![Click on "Tools."](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/nav-to-tools.png)
 
 This is where we will find all the modding tools available to us. For Civ 5, we want to find the "Sid Meier's Civilization V SDK" and install it. On Windows, you may be prompted to install a few extra things during setup; say yes and install them (they're just Microsoft shared libraries).
 
-![The SDK is ready!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civsdk.png)
+![The SDK is ready!](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/civsdk.png)
 
 Hooray! We're all set up with the mod tools for Civ.
 
@@ -26,7 +26,7 @@ Once you've launched it, you should see options to create a new map or load an e
 
 Once you click "New Map," you should see this:
 
-![Just a boring, blank map.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/generator_blank.png)
+![Just a boring, blank map.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/generator_blank.png)
 
 This is where you can randomly generate a new map with the same scripts that the game uses. You can change the initial size, the generation algorithm, and world parameters. These parameters can be a bit confusing, so [to be clear:](https://www.reddit.com/r/civ/comments/22v14b/how_exactly_do_temperature_rainfall_and_world_age/)
 
@@ -44,7 +44,7 @@ Once you've set these parameters, click the "Generate with..." button to create 
 
 Since I love playing as England (which has a strong navy), I'm going to generate an ocean-heavy map with Small Continents and high sea level. 
 
-![That's more like it.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/generator_complete.png)
+![That's more like it.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/generator_complete.png)
 
 Now I click "Accept Map," and we're brought to the main editing window. This is where the fun begins! 
 
@@ -52,63 +52,63 @@ You can move around the map by right-clicking and dragging, and you can zoom wit
 
 For demonstration's sake, I'm going to focus on a small island on my map and plop salt all over. You should take more time than I did, though--this is the creative part of making the mod. Go crazy!
 
-![Salty.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/salty.png)
+![Salty.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/salty.png)
 
 As-is, we can take this map, save it (top left corner), and play it like any other saved map in Civ 5, with random leaders and start points. The next step is more granular control of how your game will actually play out, and that's where we get into scenarios.
 
 To start editing your scenario, look on the top toolbar for the "Scenario Editor." Once you're in, you should see this:
 
-![Set your rules here.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/scenario_editor.png)
+![Set your rules here.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/scenario_editor.png)
 
 Here, you can set all the rules for your game: what era you start in, the game speed, allowed victories, and all sorts of cool stuff. In the bottom left of this window you'll also see the Players and City States window, which is where you can add in civs you want to see in-game. You can edit everything about the civ: what kind of techs they have researched, whether they are playable, what team they're on (so you can create multi-civ blocs), and even the team colors. I created the BUILDS civ, based off England, with leader Sean Smith. :)
 
 Once you have at least one civ in your scenario, a few more map options will become available to you. When editing a tile, you may recall that we had the option to set it as a random start point; now, we can specifically tell a tile to be the starting point for an included civ. Alternatively, if we go to the Cities tab, we can plop cities and then edit them. I created a city for BUILDS and then renamed it to HankTheTank. Finally, under the "Units" tab, you can add units for a civ onto the map. I gave HankTheTank a warrior to help protect it, named after me...
 
-![I like this civ.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/scenario-finished.png)
+![I like this civ.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/scenario-finished.png)
 
 Phew... we're done creating our scenario! Now, let's actually see it in game. To do this, we need to build a mod instead of just using the map file. Save your map and close out of WorldBuilder, then start up the Civ 5 SDK again. Next, open up ModBuddy (the top option). Like before, you may need to install some utilities to get this working. 
 
 Once inside, we want to create a Map Pack project. Go to File, New, Project:
 
-![Here's how to get there.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/modbuddy_nav.png)
+![Here's how to get there.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/modbuddy_nav.png)
 
 Name your map pack something descriptive.
 
-![Name it!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/modbuddy_mappack.png)
+![Name it!](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/modbuddy_mappack.png)
 
 Click through the menus until you get the option to add your map, then add it.
 
-![Name it!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/modbuddy_addmap.png)
+![Name it!](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/modbuddy_addmap.png)
 
 Finally, build your mod by going to Build, Build \<your mod\>:
 
-![Name it!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/modbuddy_build.png)
+![Name it!](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/modbuddy_build.png)
 
 And we're done! At this point, you should be able to boot up your game and play your scenario. Note that if you want to make any changes to the map later on, you'll need to open up this map pack project again in Modbuddy and rebuild it in addition to any changes you make in Worldbuilder.
 
 Let's test it out! Boot up Civ 5 and enter the Mods menu:
 
-![Here's the mods menu.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_main_menu_mods.jpg)
+![Here's the mods menu.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/civ_main_menu_mods.jpg)
 
 Next, enable your mod (ignore all my other mods, you won't see those unless you have your own mods installed)
 
-![Just enable your mod.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_enable_mod.jpg)
+![Just enable your mod.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/civ_enable_mod.jpg)
 
 Click past the disclaimer for mod safety and, under Single Player, select "Set Up Game." Then, change the map:
 
-![You want to go under "Additional Maps" to find yours.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_setup_screen_1.jpg)
+![You want to go under "Additional Maps" to find yours.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/civ_setup_screen_1.jpg)
 
 Go to "Additional Maps" and find your custom map, waiting for you!
 
-![There it is!!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_setup_screen_2.jpg)
+![There it is!!](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/civ_setup_screen_2.jpg)
 
 Once it's selected, there will be an awkwardly-placed checkbox entitled "Play Scenario." Check this, and the settings will lock in to the ones you specified earlier. 
 
-![That is a weird checkbox.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_setup_screen_3.jpg)
+![That is a weird checkbox.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/civ_setup_screen_3.jpg)
 
 Choose your leader (if you had multiple playable leaders) and start playing.
 
-![Name it!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_ingame.jpg)
+![Name it!](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/civ_ingame.jpg)
 
 There it is--our very own, very salty BUILDS Civ!
 
