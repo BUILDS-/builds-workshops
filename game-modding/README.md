@@ -86,6 +86,28 @@ Finally, build your mod by going to Build, Build \<your mod\>:
 
 And we're done! At this point, you should be able to boot up your game and play your scenario. Note that if you want to make any changes to the map later on, you'll need to open up this map pack project again in Modbuddy and rebuild it in addition to any changes you make in Worldbuilder.
 
-Let's test it out! Boot up Civ 5
+Let's test it out! Boot up Civ 5 and enter the Mods menu:
 
+![Here's the mods menu.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_main_menu_mods.jpg)
 
+Next, enable your mod (ignore all my other mods, you won't see those unless you have your own mods installed)
+
+![Just enable your mod.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_enable_mod.jpg)
+
+Click past the disclaimer for mod safety and, under Single Player, select "Set Up Game." Then, change the map:
+
+![You want to go under "Additional Maps" to find yours.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_setup_screen_1.jpg)
+
+Go to "Additional Maps" and find your custom map, waiting for you!
+
+![There it is!!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_setup_screen_2.jpg)
+
+Once it's selected, there will be an awkwardly-placed checkbox entitled "Play Scenario." Check this, and the settings will lock in to the ones you specified earlier. Choose your leader (if you had multiple playable leaders) and start playing.
+
+![Name it!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_ingame.jpg)
+
+There it is--our very own, very salty BUILDS Civ!
+
+**Give yourself a pat on the back. You just developed your own mod!**
+
+Ready for more? :)
