@@ -62,7 +62,7 @@ To start editing your scenario, look on the top toolbar for the "Scenario Editor
 
 Here, you can set all the rules for your game: what era you start in, the game speed, allowed victories, and all sorts of cool stuff. In the bottom left of this window you'll also see the Players and City States window, which is where you can add in civs you want to see in-game. You can edit everything about the civ: what kind of techs they have researched, whether they are playable, what team they're on (so you can create multi-civ blocs), and even the team colors. I created the BUILDS civ, based off England, with leader Sean Smith. :)
 
-Once you have at least one civ in your scenario (I chose England), a few more map options will become available to you. When editing a tile, you may recall that we had the option to set it as a random start point; now, we can specifically tell a tile to be the starting point for an included civ. Alternatively, if we go to the Cities tab, we can plop cities and then edit them. I created a city for BUILDS and then renamed it to HankTheTank. Finally, under the "Units" tab, you can add units for a civ onto the map. I gave HankTheTank a warrior to help protect it, named after me...
+Once you have at least one civ in your scenario, a few more map options will become available to you. When editing a tile, you may recall that we had the option to set it as a random start point; now, we can specifically tell a tile to be the starting point for an included civ. Alternatively, if we go to the Cities tab, we can plop cities and then edit them. I created a city for BUILDS and then renamed it to HankTheTank. Finally, under the "Units" tab, you can add units for a civ onto the map. I gave HankTheTank a warrior to help protect it, named after me...
 
 ![I like this civ.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/scenario-finished.png)
 
@@ -102,12 +102,16 @@ Go to "Additional Maps" and find your custom map, waiting for you!
 
 ![There it is!!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_setup_screen_2.jpg)
 
-Once it's selected, there will be an awkwardly-placed checkbox entitled "Play Scenario." Check this, and the settings will lock in to the ones you specified earlier. Choose your leader (if you had multiple playable leaders) and start playing.
+Once it's selected, there will be an awkwardly-placed checkbox entitled "Play Scenario." Check this, and the settings will lock in to the ones you specified earlier. 
+
+![That is a weird checkbox.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_setup_screen_3.jpg)
+
+Choose your leader (if you had multiple playable leaders) and start playing.
 
 ![Name it!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/civ_ingame.jpg)
 
 There it is--our very own, very salty BUILDS Civ!
 
-**Give yourself a pat on the back. You just developed your own mod!**
+**Give yourself a pat on the back. You just developed your own mod for Civ 5!**
 
 Ready for more? :)
