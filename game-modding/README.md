@@ -4,7 +4,7 @@ Welcome to the Game Modding Workshop!
 
 This will be a basic overview of the tools and methods used to create mods for two popular video games: Civilization V and The Elder Scrolls V: Skyrim. Both these games are great for modding for several reasons, but primarily because their developers actively support community-created content with publicly-available SDKs and mod tools. Because of this, both games maintain sizable and active modding communities years after their release, and new creators have a wealth of experience and support to draw from. Healthy mod communities no doubt reinforce the longevity of these games as well: Civilization 5, a nearly eight-year-old game, [is still the 12th most-played game on Steam as of this writing](http://store.steampowered.com/stats/), far outliving many big-budget AAA titles. Similarly, Skyrim (five and a half years old) is 24th, still well above any other game from its time period.
 
-But that's enough history. Let's start modding! If you have one or both of these games and you want to follow along, make sure you have them fully installed. I'm assuming people are using Steam for the purposes of this workshop.
+But that's enough history. Let's start modding! If you have one or both of these games and you want to follow along, make sure you have them fully installed. I'm assuming people are using Steam for the purposes of this workshop, and I will also assume some familiarity with the games at hand.
 
 ## Civilization 5
 
@@ -46,4 +46,46 @@ Since I love playing as England (which has a strong navy), I'm going to generate
 
 ![That's more like it.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/generator_complete.png)
 
-Now I click "Accept Map," and we're brought to the main editing window. This is where the fun begins!
+Now I click "Accept Map," and we're brought to the main editing window. This is where the fun begins! 
+
+You can move around the map by right-clicking and dragging, and you can zoom with the mousewheel or trackpad. To your right is the toolbar with all the map-editing tools. If you left-click on a hex tile, you can edit it here--changing its terrain type, what kind of resources and features it has, natural wonders, et cetera. You can also specify a tile as a starting point for a random player or city-state. If you don't feel like being *that* granular, you can use the "Paint" tab to do things in batch, or the "Plopper" tab for terrain features. If you want to randomize the world's resources, go to the "Misc" tab and select "Scatter resources." You can add rivers here too, and define continental borders. All this stuff is fairly self-explanatory, so go out and have fun with it!
+
+For demonstration's sake, I'm going to focus on a small island on my map and plop salt all over.
+
+![Salty.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/salty.png)
+
+As-is, we can take this map, save it (top right corner), and play it like any other saved map in Civ 5, with random leaders and start points. The next step is more granular control of how your game will actually play out, and that's where we get into scenarios.
+
+To start editing your scenario, look on the top toolbar for the "Scenario Editor." Once you're in, you should see this:
+
+![Set your rules here.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/scenario_editor.png)
+
+Here, you can set all the rules for your game: what era you start in, the game speed, allowed victories, and all sorts of cool stuff. In the bottom left of this window you'll also see the Players and City States window, which is where you can add in civs you want to see in-game. You can edit everything about the civ: what kind of techs they have researched, whether they are playable, what team they're on (so you can create multi-civ blocs), and even the team colors. I created the BUILDS civ, based off England, with leader Sean Smith. :)
+
+Once you have at least one civ in your scenario (I chose England), a few more map options will become available to you. When editing a tile, you may recall that we had the option to set it as a random start point; now, we can specifically tell a tile to be the starting point for an included civ. Alternatively, if we go to the Cities tab, we can plop cities and then edit them. I created a city for BUILDS and then renamed it to HankTheTank. Finally, under the "Units" tab, you can add units for a civ onto the map. I gave HankTheTank a warrior to help protect it, named after me...
+
+![I like this civ.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/scenario-finished.png)
+
+Phew... we're done creating our scenario! Now, let's actually see it in game. To do this, we need to build a mod instead of just using the map file. Save your map and close out of WorldBuilder, then start up the Civ 5 SDK again. Next, open up ModBuddy (the top option). Like before, you may need to install some utilities to get this working. 
+
+Once inside, we want to create a Map Pack project. Go to File, New, Project:
+
+![Here's how to get there.](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/modbuddy_nav.png)
+
+Name your map pack something descriptive.
+
+![Name it!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/modbuddy_mappack.png)
+
+Click through the menus until you get the option to add your map, then add it.
+
+![Name it!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/modbuddy_addmap.png)
+
+Finally, build your mod by going to Build, Build \<your mod\>:
+
+![Name it!](https://raw.githubusercontent.com/mbestavros/builds-workshops/master/game-modding/images/modbuddy_build.png)
+
+And we're done! At this point, you should be able to boot up your game and play your scenario. Note that if you want to make any changes to the map later on, you'll need to open up this map pack project again in Modbuddy and rebuild it in addition to any changes you make in Worldbuilder.
+
+Let's test it out! Boot up Civ 5
+
+
