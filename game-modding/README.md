@@ -2,11 +2,11 @@
 
 Welcome to the Game Modding Workshop! 
 
-This will be a basic overview of the tools and methods used to create mods for two popular video games: Civilization V and The Elder Scrolls V: Skyrim. Both these games are great for modding for several reasons, but primarily because their developers actively support community-created content with publicly-available SDKs and mod tools. Because of this, both games maintain sizable and active modding communities years after their release, and new creators have a wealth of experience and support to draw from. Healthy mod communities no doubt reinforce the longevity of these games as well: Civilization 5, a nearly eight-year-old game, [is still the 12th most-played game on Steam as of this writing](http://store.steampowered.com/stats/), far outliving many big-budget AAA titles. Similarly, Skyrim (five and a half years old) is 24th, still well above any other game from its time period.
+This will be a basic overview of the tools and methods used to create mods for two popular video games: Sid Meier's Civilization V and The Elder Scrolls V: Skyrim. Both these games are great for modding for several reasons, but primarily because their developers actively support community-created content with publicly-available SDKs and mod tools. Because of this, both games maintain sizable and active modding communities years after their release, and new creators have a wealth of experience and support to draw from. Healthy mod communities no doubt reinforce the longevity of these games as well: Civilization 5, a nearly eight-year-old game, [is still the 12th most-played game on Steam as of this writing](http://store.steampowered.com/stats/), far outliving many big-budget AAA titles. Similarly, Skyrim (five and a half years old) is 24th, still well above any other game from its time period.
 
 But that's enough history. Let's start modding! If you have one or both of these games and you want to follow along, make sure you have them fully installed. I'm assuming people are using Steam for the purposes of this workshop, and I will also assume some familiarity with the games at hand.
 
-## Civilization 5
+## Civilization V
 
 We'll start with a fairly simple yet fun Civ 5 mod: how to make your own custom map and/or scenario. Rig your start and be super OP!
 
@@ -115,3 +115,9 @@ There it is--our very own, very salty BUILDS Civ!
 **Give yourself a pat on the back. You just developed your own mod for Civ 5!**
 
 Ready for more? :)
+
+## The Elder Scrolls V: Skyrim
+
+Let's jump into Skyrim now!
+
+On the face of it, Skyrim can be a lot more intimidating to approach than Civilization V. Where with Civ you have a nice, graphical map creator, with Skyrim you get the Creation Kit: a powerful tool that gets much closer to the structure of the game and requires a much deeper understanding about how the game works. 
