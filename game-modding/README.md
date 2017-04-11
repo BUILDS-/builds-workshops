@@ -122,4 +122,8 @@ Let's jump into Skyrim now!
 
 On the face of it, Skyrim can be a lot more intimidating to approach than Civilization V. Where with Civ you have a nice, graphical map creator, with Skyrim you get the Creation Kit: a powerful tool that gets much closer to the structure of the game and requires a much deeper understanding about how the game works. It can take some time to learn, but once you've got the hang of it, you can change pretty much everything about Skyrim easily.
 
-The way Skyrim handles its game world is actually very clever. One of the things that always boggled my mind about the game is how well it handled world state, 
+One of the things that always boggled my mind about Skyrim was how well it handled game state: pretty much every action the player did had an effect that was reflected, and remembered, in the world. You could move a cup from one table to another in an inn, travel around the world, and come back and that cup would be right where you left it--and it tracks small changes like this for *everything.* This, in an extremely detailed and densely-packed game world. How does it manage to keep track of everything without a gigantic save file that records the state of every single object in the game?
+
+The answer, as it turns out, is pretty clever. Essentially, Skyrim's game files represent the initial game state; in other words, as it is when the player clicks "New Game" on the main menu. Anything the player does to change the game from that initial state is recorded and stored in the save files. Since, presumably, the player won't change literally everything from the way it was when the game started, the changes that need to be stored are pretty small, and most save files weigh in at under 10 megabytes. 
+
+This "changes to master" model affects how we can think about mods: essentially, most (static) changes to Skyrim are just modifications to the intital game state, and the game handles things after that. 
