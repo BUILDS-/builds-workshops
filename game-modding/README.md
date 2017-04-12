@@ -72,6 +72,7 @@ Once inside, we want to create a Map Pack project. Go to File, New, Project:
 
 ![Here's how to get there.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/modbuddy_nav.png)
 
+
 Name your map pack something descriptive.
 
 ![Name it!](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/modbuddy_mappack.png)
@@ -92,7 +93,7 @@ Let's test it out! Boot up Civ 5 and enter the Mods menu:
 
 Next, enable your mod (ignore all my other mods, you won't see those unless you have your own mods installed)
 
-![Just enable your mod.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/civ_enable_mod.jpg)
+*![Just enable your mod.](https://raw.githubusercontent.com/BUILDS-/builds-workshops/master/game-modding/images/civ_enable_mod.jpg)
 
 Click past the disclaimer for mod safety and, under Single Player, select "Set Up Game." Then, change the map:
 
@@ -122,7 +123,54 @@ Let's jump into Skyrim now!
 
 On the face of it, Skyrim can be a lot more intimidating to approach than Civilization V. Where with Civ you have a nice, graphical map creator, with Skyrim you get the Creation Kit: a powerful tool that gets much closer to the structure of the game and requires a much deeper understanding about how the game works. It can take some time to learn, but once you've got the hang of it, you can change pretty much everything about Skyrim easily.
 
-One of the things that always boggled my mind about Skyrim was how well it handled game state: pretty much every action the player did had an effect that was reflected, and remembered, in the world. You could move a cup from one table to another in an inn, travel around the world, and come back and that cup would be right where you left it--and it tracks small changes like this for *everything.* This, in an extremely detailed and densely-packed game world. How does it manage to keep track of everything without a gigantic save file that records the state of every single object in the game?
+There are actually two mod tools we need to become familiar with: the Creation Kit, and the game itself. The Creation Kit allows you to change pretty much everything in the game directly: it presents every single game object, along with their properties and relationships to each other, and allows you to edit them at will. Any changes you make are then saved as a mod, and when the mod is loaded, the game reflects that mod's changes. This process is highly related to how the game manages data, and if you're interested in learning about that, I've written a more technical explanation below. <sup>1</sup>
+
+In a progression-driven game like Skyrim, testing your mods can be difficult and time-consuming without aid. Fortunately, Skyrim on PC has a powerful built-in console that allows us to manipulate our game easily, making testing much easier. (You may be familiar with it as a form of "cheat code.") Let's cover that before we dive into the Creation Kit.
+
+Jump in-game to Skyrim on PC. By default, if you don't have a controller plugged in, the key to bring up the console is ``~``. The game should stop simulation and prompt you for your command:
+
+**IMAGE HERE**
+
+You can tell the bottom half of the screen is tinted dark; that's the console window. We can type in any accepted command here. The full list (with explanations about what they do) can be found [here](http://en.uesp.net/wiki/Skyrim:Console). You shouldn't need to use most of these at all, and there are only a handful that I use on a regular basis. 
+
+We'll start with a command that is very useful for testing mods. First, go to the main menu, bring up the console, type:
+
+``> coc qasmoke``
+
+and press Enter. This teleports you to the qasmoke chamber, which, as the name would imply, is used for QA smoke testing by the developers. It's especially useful for testing mods because 1) when entered from the main menu, it creates a clean save, allowing you to test the mod from a clean slate, and 2) it contains every crafting station, chests that contain every single object in the game, and an enemy spawner room. In essence, if your mod relies on a built-in game system, you can access that system from qasmoke. 
+
+Okay, let's say we wanted to make Ebony Armor. How would we go about that without playing through the entire game? You guessed it, with the console! Firstly, in order to craft ebony armor, we need to have the requisite Smithing skill--but since this is a new game, we don't have that yet. Not to worry! All we need to do is type in the console:
+
+``advskill smithing 1000000``
+
+This command **adv**ances the **skill** we specify by the number of XP we specify. In this case, we advanced the Smithing skill by enough to allow us to get the "Ebony Smithing" perk. Once we get that perk, we can go to a smelter and craft Ebony Armor... or rather, we would be able to if we had the correct materials on us. Once again, the console comes to the rescue: you can fully manage your or any other NPC's inventory in the console. You can type ``player.inv`` to see everything in your inventory:
+
+**IMAGE HERE**
+
+You'll notice that every item has a hex value associated with it. Those are the object IDs, which we can use to reference those objects. For example, we can see that the Iron Helmet has ID ``00012e4d``. If we wanted to add another Iron Helmet to our inventory, all we'd need to do is ``player.additem 12e4d 1`` to add a single Iron Helmet to our inventory. (The leading zeros in the ID don't matter.) 
+
+**COMMAND IMAGE HERE**
+
+**INVENTORY IMAGE HERE**
+
+Similarly, if we want to remove something, we can use ``player.removeitem 12e4d 1``. 
+
+If we want to know the ID of something that we have a proper name for, we can use the ``help`` command. Just type your query afterwards and it'll give you a list of everything that relates to that string. For example, ``help ingot`` will return the IDs of all the ingots in the game. If you want to do a multi-word query, surround it with quotes: ``help "iron ingot"``. 
+
+If we want to manage the inventory of an NPC, we need to click on them in the console, which brings up their RefID. (This is a different type of ID that points to the specific **ref**erence of an object in the game. This doesn't change, and you can look up NPC RefIDs online pretty easily.) When this happens, it means we have targeted them, and any commands we run will now be performed on that target if we don't specify otherwise. We can use ``inv``, ``additem``, and ``removeitem`` on them as we would on the player. We can also use ``equipitem``, which equips the specified item of clothing to that NPC, eg. ``equipitem 12e4d``.
+
+
+
+
+**If you do end up using these for testing, it's a good idea to use a clean save. We'll get to that in a moment.**
+
+The first command you should know is the 
+
+
+
+
+
+<sup>1</sup> One of the things that always boggled my mind about Skyrim was how well it handled game state: pretty much every action the player did had an effect that was reflected, and remembered, in the world. You could move a cup from one table to another in an inn, travel around the world, and come back and that cup would be right where you left it--and it tracks small changes like this for *everything.* This, in an extremely detailed and densely-packed game world. How does it manage to keep track of everything without a gigantic save file that records the state of every single object in the game?
 
 The answer, as it turns out, is pretty clever. Essentially, Skyrim's game files represent the initial game state; in other words, as it is when the player clicks "New Game" on the main menu. Anything the player does to change the game from that initial state is recorded and stored in the save files. Since, presumably, the player won't change literally everything from the way it was when the game started, the changes that need to be stored are pretty small, and most save files weigh in at under 10 megabytes. 
 
