@@ -122,7 +122,7 @@ Ready for more? :)
 Let's jump into Skyrim now!
 
 On the face of it, Skyrim can be a lot more intimidating to approach than Civilization V. Where with Civ you have a nice, graphical map creator, with Skyrim you get the Creation Kit: a powerful tool that gets much closer to the structure of the game and requires a much deeper understanding about how the game works. It can take some time to learn, but once you've got the hang of it, you can change pretty much everything about Skyrim easily.
-
+"
 There are actually two mod tools we need to become familiar with: the Creation Kit, and the game itself. The Creation Kit allows you to change pretty much everything in the game directly: it presents every single game object, along with their properties and relationships to each other, and allows you to edit them at will. Any changes you make are then saved as a mod, and when the mod is loaded, the game reflects that mod's changes. This process is highly related to how the game manages data, and if you're interested in learning about that, I've written a more technical explanation below. <sup>1</sup>
 
 ### In-Game Console
