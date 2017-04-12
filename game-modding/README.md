@@ -125,6 +125,8 @@ On the face of it, Skyrim can be a lot more intimidating to approach than Civili
 
 There are actually two mod tools we need to become familiar with: the Creation Kit, and the game itself. The Creation Kit allows you to change pretty much everything in the game directly: it presents every single game object, along with their properties and relationships to each other, and allows you to edit them at will. Any changes you make are then saved as a mod, and when the mod is loaded, the game reflects that mod's changes. This process is highly related to how the game manages data, and if you're interested in learning about that, I've written a more technical explanation below. <sup>1</sup>
 
+### In-Game Console
+
 In a progression-driven game like Skyrim, testing your mods can be difficult and time-consuming without aid. Fortunately, Skyrim on PC has a powerful built-in console that allows us to manipulate our game easily, making testing much easier. (You may be familiar with it as a form of "cheat code.") Let's cover that before we dive into the Creation Kit.
 
 Jump in-game to Skyrim on PC. By default, if you don't have a controller plugged in, the key to bring up the console is ``~``. The game should stop simulation and prompt you for your command:
@@ -133,9 +135,11 @@ Jump in-game to Skyrim on PC. By default, if you don't have a controller plugged
 
 You can tell the bottom half of the screen is tinted dark; that's the console window. We can type in any accepted command here. The full list (with explanations about what they do) can be found [here](http://en.uesp.net/wiki/Skyrim:Console). You shouldn't need to use most of these at all, and there are only a handful that I use on a regular basis. 
 
+**PLEASE NOTE:** while most of the commands I show you here are perfectly safe and can be used anywhere you want with no issues to your game, you should always err on the side of caution--especially if you're experimenting with more exotic ones. 
+
 We'll start with a command that is very useful for testing mods. First, go to the main menu, bring up the console, type:
 
-``> coc qasmoke``
+``coc qasmoke``
 
 and press Enter. This teleports you to the qasmoke chamber, which, as the name would imply, is used for QA smoke testing by the developers. It's especially useful for testing mods because 1) when entered from the main menu, it creates a clean save, allowing you to test the mod from a clean slate, and 2) it contains every crafting station, chests that contain every single object in the game, and an enemy spawner room. In essence, if your mod relies on a built-in game system, you can access that system from qasmoke. 
 
@@ -159,14 +163,51 @@ If we want to know the ID of something that we have a proper name for, we can us
 
 If we want to manage the inventory of an NPC, we need to click on them in the console, which brings up their RefID. (This is a different type of ID that points to the specific **ref**erence of an object in the game. This doesn't change, and you can look up NPC RefIDs online pretty easily.) When this happens, it means we have targeted them, and any commands we run will now be performed on that target if we don't specify otherwise. We can use ``inv``, ``additem``, and ``removeitem`` on them as we would on the player. We can also use ``equipitem``, which equips the specified item of clothing to that NPC, eg. ``equipitem 12e4d``.
 
+Finally, you can change your character's appearance with the console using ``showracemenu``. There are some caveats to this, though: changing your character's race will result in their skills being reset, and there may be lingering issues in some parts of the game if you change gender. These issues will only persist if you save the game, though, so if you're just using it to test (or design a face, more on that later) you should be fine. You *can* use this in a normal playthrough and you shouldn't have any issues, as long as you stick to basic changes (like facial appearance and hairstyles). 
 
+### Creation Kit
 
+Okay, that's the console--now let's dig into the Creation Kit. Quit Skyrim and navigate to Steam's "Tools" menu (same as before). Look for the "Skyrim Creation Kit," and install it. Open it up, and you'll see something like this:
 
-**If you do end up using these for testing, it's a good idea to use a clean save. We'll get to that in a moment.**
+**Creation Kit default image here**
 
-The first command you should know is the 
+Right now, it doesn't do anything useful: it's just empty. To start modding, we have to tell it which files to load, which we can do by clicking the "Load" button in the top left corner. You'll see a list of master and plugin files; the ones you choose here will affect which items you can screw around with when you make your mod. By default, you should always select ``Skyrim.esm`` and ``Update.esm``. This will get you the fully updated version of Skyrim loaded in. If you want to load any expansions, there's another step you need to take, which I'll detail in a footnote.<sup>2</sup> Once you've selected all you want, then click "OK" and wait for it to load (it may take a while). If any warnings pop up, just say "Yes to all" (they're harmless) and keep going. Eventually, the sub-window called the "Object Window" will populate, at which point you are ready to go! But first... save your mod. Seriously. The Creation Kit is *very* unstable, and it **WILL** crash. It's an absolute certainty. You just don't know exactly *when* it'll crash, so save and save often. Name it something descriptive.
 
+With that out of the way, let's actually get to modding! We'll start with a simple mod: we're going to change how Jarl Balgruuf looks and give him some sideburns. To start, in the Object Window, expand "Actors" -> "Actor" -> "NordRace" -> "Male" and look for "BalgruufTheGreater." Once you find him, right-click and click "Edit," and you should see this:
 
+**IMAGE**
+
+From here, you can change anything about Balgruuf. What we're interested in is what he looks like. At the bottom you should see a checkbox for "Preview." Select "Head," and a preview of how he looks will pop up to your left. 
+
+To modify his appearance, look at the top tabs and scroll right until you can see the tab for "Character Gen Morphs." Click on it, and you should see this:
+
+**IMAGE**
+
+This gives you a bunch of characteristics you can modify about him. In the box on the right-hand side of the window called "Base Head Parts," you should see an entry for Facial Hair. Click on it, and you can modify his facial hair with the dropdown below:
+
+**IMAGE**
+
+You can also modify a bunch of his other characteristics, like what warpaint he has on, or his hair color, or what scars he has. For good measure, I also gave him some lipstick. (And I renamed him to Mr. Python himself. :) )
+
+The next tab over also lets you modify his face shape, if you want to.
+
+Once you're done, click "OK." The last step is to click on him (so he's highlighted) and then press Ctrl+F4. Click OK on the popups, and then **SAVE**. What we just did was export the face data so that his face appears properly. If we skip this step, his head will be grey and look weird.
+
+**IMAGE**
+
+Alright, let's see what we just made! Open up the Skyrim launcher. Click on "Data Files" and ensure that your mod is checked and after all the base game data files:
+
+**IMAGE**
+
+With that done, start up Skyrim. Now is a great time to practice the console and to teach you something new. Go to qasmoke (remember, ``coc qasmoke`` in the console) to start up. Now, we need to get to Whiterun (where Balgruuf, the man we edited, lives). One trick to do this is to teleport yourself to somebody living in Whiterun--say, Adrianne Avenicci, the blacksmith--and then go from there. We can look up her RefID [online](http://en.uesp.net/wiki/Skyrim:Adrianne_Avenicci) (it's ``0001A67C``) and use ``player.moveto 1a67c`` to move to her. Now, we just need to go to Dragonsreach, the palace on the hill, to see our handiwork:
+
+**image here**
+
+Sideburn Balgruuf! Not bad for our first Skyrim mod!
+
+Like I said, this just scratches the surface of modding Skyrim. If you're interested in going further with this, just poke around the Creation Kit. The entire game is right there, ready for you to tinker with.
+
+I sincerely hope you enjoyed the workshop as much as I did making it! If you have any questions, do not hesitate to get in touch.
 
 
 
@@ -175,3 +216,5 @@ The first command you should know is the
 The answer, as it turns out, is pretty clever. Essentially, Skyrim's game files represent the initial game state; in other words, as it is when the player clicks "New Game" on the main menu. Anything the player does to change the game from that initial state is recorded and stored in the save files. Since, presumably, the player won't change literally everything from the way it was when the game started, the changes that need to be stored are pretty small, and most save files weigh in at under 10 megabytes. 
 
 This "changes to master" model affects how we can think about mods: essentially, most (static) changes to Skyrim are just modifications to the initial game state. The Creation Kit allows you to modify this initial game state directly, providing access to every object in the game along with their properties and relationships to each other. Any changes you make are stored in an .esp file, short for "Elder Scrolls **Plugin** file, running on top of an .esm (or "Elder Scrolls **Master**" file) where the game is stored.
+
+<sup>2</sup> By default, Skyrim's configuration files are not set up properly to load the expansion packs. If you want to load something from, say, Dawnguard, there's one more step you need to do. Go to your Skyrim install directory (if you use Steam, it should be ``<your Steam install directory>/steamapps/common/skyrim``. There will be a configuration file called SkyrimEditor.ini (if it isn't there, run the Creation Kit and it should appear). Open this file up in a text editor of your choice. Scroll and look for a section called ``[Archive]``. By default, there should be a line that says ``SResourceArchiveList2=Skyrim - Shaders.bsa, Update.bsa``. What you need to do is add the .bsa file for the expansion you want to this line. For Dawnguard (as an example), this should be ``SResourceArchiveList2=Skyrim - Shaders.bsa, Update.bsa, Dawnguard.bsa``. Save the file and try loading the Creation Kit with your desired expansion again. You may encounter a few more warnings than usual, but it should load. Have fun!
