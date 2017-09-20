@@ -1,29 +1,9 @@
 # Create Your Own Website
 
-1. First you'll need to signup for a github account
+## Set up GitHub account
+ First, you need a Github account: go to https://github.com/
 
-	https://github.com
-
-2. In the top bar of github click: 
-
-	`+ > New repository`
-
-3. Title your repository:
-
-	`[github_username].gihub.io`
-
-4. Add a file called index.html, copy it from this repo.
-
-5. Open up the page in your web browser by double clicking the file. See my webpage http://cs-people.bu.edu/swsmith for an example 
-
-6. Change all the occurences of `Your Name` to your name.
-
-7. Put an image in the same repository and change the following tag to the name of your image.
-
-	<src="yourimage.jpg" class="thumbnail displayed" height="400px" align="middle">
-
-8. Boostrap has a column system, columns are divided into 12 parts. See this page: http://getbootstrap.com/css/#grid
-
+1. Also verify your account !
 
 ## Setup your own free domain
 
@@ -31,27 +11,33 @@
 
 2. Find a domain and click `Add` then click `Complete Order`
 
-3. Enter your bu email on the next page and click continue
+3. Under choose free options, select `Github pages setup `
 
-4. Click `Dashboard > Manage > Advanced DNS > Host Records > Add Records`
+4. Enter your BU email on the next page and click continue
 
-5. Create a new record:
+5. Verify your email 
 
-	Record Type: A
-	Host: @
-	IP Address: 192.30.252.154
-	TTL: Automatic
-	Name: github pages
+6. Register for a Namecheap account
 
-6. Create another record with the same parameters except the ip should be:
+7. Add your Github account
 
-	`192.30.252.153`
+At this point you should have a bare repo called: `username.github.io`
+<br /> nc.me will take care of adding any configuration files
 
-7. Go back to the github repo and create a file called CNAME with the contents:
 
-	`yourdomain.me`
+## Next lets set up the template
 
-8. Open up http://yourdomain.me, you should now see your website!
+1. You can clone my repo that has the template: <br />
+ `git clone https://github.com/armins88/armins88.github.io.git`
+
+2. Or you can just get the `index.html` from this workshop repo. 
+
+3. Modify the files so it displays your name and makes any stylistic adjustments.
+
+4. Upload the `index.html` into your own repo that 
+
+5. Wait up to 5 mins, and then check your .me domain
+
 
 ## Signing up for the github student pack
 
