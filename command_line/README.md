@@ -153,7 +153,43 @@ Now let's address the elephant in the room, `.betyoudidntseethisfile.txt`. Let's
 
 Wow! It's so easy to hide files in unix based systems.
 
-Now let's move onto more advanced topics.
+You should now be pretty comfortable with navigating around your filesystem using UNIX commands. Chances are a lot of your interaction with the command line will be using these commands. Now, we'll move on to some more advanced topics, starting with how to edit files with a text editor.
+
+### Editing Files Using a Command Line Text Editor
+
+Okay, how about actually working with files instead of just navigating around and looking at them? This is where we start learning how to use Vim, a command line text editor.
+
+Let's open up supersecretproject.txt:
+
+	$ vim supersecretproject.txt
+	
+By default, Vim only looks at the file, and will not let you make changes yet. You can move the cursor around using the arrow keys. When you're ready to start editing, press ``i`` (for Insert) to start changing text. 
+
+When you're done, you'll need to save and exit. This can be done by pressing the escape key, which takes you back to the default view mode. To give a command, we use the colon key, and then type a command. To exit Vim and save the file you're working on, type ``:wq!``
+
+You can use the `cat` command to see your edited file.
+
+Vim is extremely powerful, and many people swear by it. I find it most useful to make small edits to things when I'm already in the command line; if I'm doing something more substantive, I'll use Sublime Text.
+
+### SSH and SCP
+
+Now, let's learn about two very useful tools: ``ssh`` and ``scp``. ``ssh`` (short for "secure shell") is basically remote login: it allows a UNIX-based machine to connect to another UNIX-based machine and issue commands remotely. This is the command we use to interact with the CSA servers here at BU. In fact, let's try logging in using ``ssh`` right now:
+
+	$ ssh [your_bu_username]@csa2.bu.edu
+	
+This will begin the process of remotely logging you into the CSA2 lab machine. Assuming you've already set an account up, you'll just need to enter your BU credentials and you're all set to go. (Don't worry if your password doesn't show up in the terminal window; that's intended behavior).
+
+You'll be presented with your CSA home directory. This is a UNIX system, so all the commands you've learned up to here still work! Explore around a little bit. When you're ready to go back to your local machine, just type ``exit``. The command history will clear, but you should still be in the same directory you started ``ssh`` from.
+
+Now, let's learn how to move a file from our local machine to ``csa2`` using ``scp`` (short for secure copy). This is especially useful if you have, for example, a homework file that you need to submit using ``gsubmit`` (which will also be covered a bit later on).
+
+We have our text file supersecretproject.txt in our current directory. Let's move it to the home directory on ``csa2`` with this command:
+
+	$ scp supersecretproject.txt [your_bu_username]@csa2.bu.edu:~
+
+Just like with SSH, you'll be prompted for your login info. Once entered, it should copy up. Now, if we log in to ``csa2`` using ``ssh``, we should see your file right there!
+
+You can customize the remote directory you send the file to by changing the file path after the colon. Note, however, that the path must exist *before* you send the file up.
 
 ### Tmux and Shortcuts
 
