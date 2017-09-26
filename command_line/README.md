@@ -191,6 +191,123 @@ Just like with SSH, you'll be prompted for your login info. Once entered, it sho
 
 You can customize the remote directory you send the file to by changing the file path after the colon. Note, however, that the path must exist *before* you send the file up.
 
+### gsubmit
+
+I won't dive into the specifics of ``gsubmit`` here; you can find all you need at [this link](http://cs-people.bu.edu/lapets/320-2015-fal/s.php?#A). Your workflow will differ slightly; you will use the terminal to copy your files up using ``scp``, use ``ssh`` to log into the CSA machines, assemble your files as directed above, and then use the ``gsubmit`` command. Note that entering this command counts as a homework submission, so don't test this out until you have a reason to do so.
+
+### Symlinks (Primarily useful for Windows Linux users)
+
+Exit out of CSA if you haven't already, and go back to your home directory. Symlinks (short for "symbolic links") are essentially links to another file or directory on your file system. They act like whatever they point to.
+
+Learning how to use this isn't exceptionally important for Mac or Linux users, but for Windows users, it's practically essential. Because of the way the Linux subsystem is implemented, Windows does not have direct access to the Linux filesystem. This means that any files we create in the Linux filesystem can only be used within Linux--however, any Windows files can be accessed by everyone. Thus, it is most useful to simply use Linux to interact with Windows files. Unfortunately, the file path for the Windows filesystem is convoluted, and tedious to use all the time. The solution is simple: create a symlink within your Linux home directory that links to your Windows home directory. Boom, you have direct access to all your Windows files.
+
+To create the symlink we want (on Windows), we use ``ln -s``:
+
+	$ ln -s [source file or directory] [symlink name]
+
+The Windows filesystem is mounted in Linux, so our C drive is stored at `/mnt/c`. Beyond that, it's just the path from within Windows.
+So, to create a symlink to my user directory in Windows, I would do this:
+
+	$ ln -s /mnt/c/Users/[windows-username] windows-home
+	
+This creates a symlink called `windows-home` that links to my Windows user directory. If I navigate inside, I get my Windows home directory! This process can be repeated for any directory you want.
+
+
+### Pimp My Command Line
+
+Now we get into the really fun stuff. These things will allow you to really customize your command line and make it your own.
+
+## Install a new .bash_profile
+
+Settings for a local UNIX shell user are stored in the .bash_profile file in your home directory. We've included a few example .bash_profile files for you to explore.
+
+For Windows Linux users, you  want to edit the .bashrc file in your home directory instead. The .bash_profile doesn't do anything in WSL. All the changes will be the same, though, regardless if you put them in .bash_profile or .bashrc.
+
+To install a new .bash_profile, copy the contents into your current ~/.bash_profile (or ~/.bashrc if on Windows)
+
+	vim .bash_profile (copy the contents)
+	vim ~/.bash_profile (paste into here)
+
+Then refresh bash to make the changes:
+
+	source ~/.bash_profile
+
+A shortcut to this is:
+
+	. ~/.bash_profile
+
+## Create a shortcut for Sublime Text 3
+
+It would be great if you could switch from the command to Sublime really quickly right? Or open up text using Sublime instead of Vim? We can make that happen, using symlinks!
+
+On Mac, enter the following (making sure your Sublime install directory is correct):
+
+	ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+	
+On Windows, it's similar logic: you just need to find the Windows .exe file associated with the program you want. 
+
+	ln -s "[path_to_your_sublime_exe_file]" /usr/local/bin/subl
+
+In fact, any Windows .exe file can be run from within the Bash shell! You just need to symlink it to ``/usr/local/bin/[program_name]``.
+
+Now, you can easily launch sublime:
+
+	subl (opens last window)
+	subl . (opens current folder)
+	subl README.md (open this README in sublime)
+	
+## Package Managers: apt-get
+
+On Windows and Linux (but not on Mac), you should by default have the ``apt-get`` package manager installed. This can be used to get command-line utilities. We'll get a few fun ones and then demonstrate how they work.
+
+	$ sudo apt-get install lolcat
+	$ sudo apt-get install python-pip
+	$ sudo apt-get install cowsay
+
+You can get pretty much any command-line utility using apt-get.
+
+## Install lolcat and fortune
+
+On Mac, you need the Ruby gem installer to install lolcat. To install gem:
+
+	wget https://rubygems.org/rubygems/rubygems-2.4.8.zip
+	unzip rubygems-2.4.8.zip
+	cd rubygems-2.4.8
+	sudo ruby setup.rb
+
+Then you can install lolcat (Windows/Linux users already did this):
+
+	gem install lolcat
+
+And colorize text super easily:
+
+	echo "I'm full of colors" | lolcat
+
+## Install fortune
+
+You'll need pip, to install pip go here: https://pip.pypa.io/en/stable/installing/
+
+Then you can just do (on Windows too):
+
+	pip install fortune
+
+## Install cowsay
+
+Install the following (already done on Windows):
+	install.packages("devtools")
+	devtools::install_github("sckott/cowsay")
+
+## Putting it all together
+
+Type the following for interesting quotes:
+
+	$ echo fortune | cowsay | lolcat
+
+And that's a wrap! Hopefully you found this workshop helpful. Practice and tinker in your spare time! You can do lots of cool stuff with the command line.
+
+Included below are some even more advanced topics for people who want to experiment even further. In particular, the ssh-keygen method is really cool. (I do not personally use tmux, so I will not teach it in this version of the workshop.)
+
+
 ### Tmux and Shortcuts
 
 Go to the `command_line/` folder you cloned earlier and do an `ls -a`. This folder contains the following hidden files:
@@ -215,21 +332,7 @@ Now start a tmux session with:
 	Ctrl-a | (split vertically)
 	Ctrl-a [Arrow_key] (move between panes)
 	exit (quits tmux)
-
-## Install a new .bash_profile
-
-To install .bash_profile open it up and copy the contents into your current ~/.bash_profile
-
-	nano .bash_profile (copy the contents)
-	nano ~/.bash_profile (paste into here)
-
-Then refresh bash to make the changes:
-
-	source ~/.bash_profile
-
-A shortcut to this is:
-
-	. ~/.bash_profile
+	
 
 ## Login to CSA without a password
 
@@ -269,59 +372,3 @@ Try and login to your csa account.
 	ssh [YOUR_USERNAME]@csa2.bu.edu
 
 You shouldn't be prompted for a username.
-
-## Create a shortcut for Sublime Text 3
-
-It would be great if you could switch from the command to Sublime really quickly right?
-
-Enter the following:
-
-	ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-
-Then you can easily launch sublime
-
-	subl (opens last window)
-	subl . (opens current folder)
-	subl README.md (open this README in sublime)
-
-## Install lolcat and fortune
-
-You need Ruby gem installer to install lolcat. To install gem:
-
-	wget https://rubygems.org/rubygems/rubygems-2.4.8.zip
-	unzip rubygems-2.4.8.zip
-	cd rubygems-2.4.8
-	sudo ruby setup.rb
-
-Then you can install lolcat:
-
-	gem install lolcat
-
-And colorize text super easily:
-
-	echo "I'm full of colors" | lolcat
-
-## Install fortune
-
-You'll need pip, to install pip go here: https://pip.pypa.io/en/stable/installing/
-
-Then you can just do:
-
-	pip install fortune
-
-## Install cowsay
-
-Install the following:
-	install.packages("devtools")
-	devtools::install_github("sckott/cowsay")
-
-## Putting it all together
-
-Type the following for interesting quotes:
-
-	fortune | cowsay | lolcat
-
-Learn tmux for awesome window splitting!
-
-Enjoy!
-
