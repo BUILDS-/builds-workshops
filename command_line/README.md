@@ -12,7 +12,7 @@ Let's get going! The first step is to find your terminal; on Mac and Linux, this
 
 This repo contains some resources we'll need, so the first step is to clone this repo using ``git``. You'll want to type:
 
-	$ git clone 
+	$ git clone https://github.com/BUILDS-/builds-workshops.git
 
 We'll start with basic navigation and file editing.
 
@@ -27,12 +27,12 @@ This directory on a Mac is `/Users/[Username]` where `[Username]` is your userna
 
 Since the home directory is accessed quite frequently, it's shortened to `~`. From now on we'll refer to folders as directores and we'll call your home directory `/home/username`. 
 
-To see the files in the current directory just type `ls`, this lists files in your current working directory. You may or may not have files in your home directory (if on Mac, you probably will). You'll see the `command_line` folder we cloned earlier. You'll also see some of your own files:
+To see the files in the current directory just type `ls`, this lists files in your current working directory. You may or may not have files in your home directory (if on Mac, you probably will). You'll see the `builds-workshops` folder we cloned earlier. You'll also see some of your own files:
 
 	$ ls
-	command_line
+	builds-workshops
 
-Now let's learn a new command `cd`. This moves between folders, so let's say I type:
+Now let's learn a new command: `cd`. This moves between folders, so let's say I type:
 
 	$ cd ~
 
@@ -41,15 +41,42 @@ That will navigate to my home directory. I can now type:
 	$ pwd
 	/home/username
 
-To see the directory you're currently in. Ok, Let's go into the `me/` directory and type `ls` to get the following folder structure.
+to see the directory you're currently in. Ok, let's go into the ``builds-workshops`` directory using ``cd builds-workshops``. Now, if you type `pwd`, you'll see that our directory has changed:
 
+	$ pwd
+	/home/username/builds-workshops
+	
+Cool! Let's navigate one directory deeper, into the ``command_line/`` directory. This is the subdirectory of the repo you're currently reading this on! Let's explore what else we have in this directory using `ls`:
 
-	$ cd command_line/me
+	$ cd command_line
 	$ ls
-	me/
-		hello.txt
-		projects/
-			supersecretproject.txt
+	cheat_sheet.md
+	cover_photo.jpg
+	Description.md
+	me
+	README.md
+	
+Let's see what's in the `me/` directory. Navigate in using `cd` and type `ls` to get the folder structure.
+
+
+	$ cd me
+	$ ls
+	hello.txt
+	projects/
+	
+We've been navigating deeper into the directory structure. What if we want to go up? Turns out the command is pretty simple. Using ``cd ..`` will take you to the parent directory. (We'll explain more about this in a bit.)
+
+	$ pwd
+	/home/username/builds-workshops/command_line/me
+	$ cd ..
+	$ pwd
+	/home/username/builds-workshops/command_line
+	
+We can also use a relative file path to get where we want. It looked like there was a ``projects/`` subdirectory under the ``me`` directory, so let's go there directly:
+
+	$ cd me/projects
+	$ ls
+	supersecretproject.txt
 
 Oh look! There's a super secret file. How do I view that? I do the following:
 
@@ -60,7 +87,7 @@ I used a new command `cat` which simply prints the contents of a file. Let's go 
 
 	$ mv supersecretproject.txt notsosecretanymore.txt
 
-Ok, we've learned a lot so let me recap.
+Ok, we've learned a lot so let's recap.
 
 #### ls
 List the files and directories in a your current working directory.
@@ -72,7 +99,7 @@ List the files and directories in a your current working directory.
 List the current working directory
 
 	$ pwd
-	/home/username/command_line/me
+	/home/username/builds-workshops/command_line/me
 
 #### cd
 Move into different folders
@@ -91,10 +118,10 @@ Rename or move a file
 
 ### Hidden Files
 
-Some files in unix based systems are hidden. Hidden files start with a `.`, to see them type `ls -a` the `-a` is what's called a flag. It's used to denote special options for a command. First let's make sure we're in the projects directory.
+Some files in UNIX-based systems are hidden. Hidden files start with a `.`, to see them type `ls -a`. The `-a` is what's called a flag. It's used to denote special options for a command. First let's make sure we're in the projects directory.
 
 	$ pwd
-	/home/username/command_line/me/projects
+	/home/username/builds-workshops/command_line/me/projects
 	$ ls -a
 	.                           .betyoudidntseethisfile.txt
 	..                          supersecretproject.txt
@@ -104,10 +131,10 @@ Wow! We have three secret files. You'll notice there are two secret files that a
 The `.` directory is the current directory. If you type:
 
 	$ pwd
-	/home/username/command_line/me/projects
+	/home/username/builds-workshops/command_line/me/projects
 	$ cd .
 	$ pwd
-	/home/username/command_line/me/projects
+	/home/username/builds-workshops/command_line/me/projects
 
 You'll notice you didn't go anywhere! This is because you changed directories into the current directory.
 
@@ -115,9 +142,11 @@ The next directory `..` is used to denote one directory up. Let's test it out:
 
 	$ cd ..
 	$ pwd
-	/home/username/command_line/me
+	/home/username/builds-workshops/command_line/me
 
-We've moved one directory up! Now let's address the elephant in the room, `.betyoudidntseethisfile.txt`. Let's cat it out.
+We've moved one directory up! This is the same command we used before: we were essentially navigating into the universal "up" directory that is a part of all UNIX directories. 
+
+Now let's address the elephant in the room, `.betyoudidntseethisfile.txt`. Let's cat it out.
 
 	$ cd projects
 	$ cat .betyoudidntseethisfile.txt
