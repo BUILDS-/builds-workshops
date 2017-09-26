@@ -213,7 +213,7 @@ So, to create a symlink to my user directory in Windows, I would do this:
 This creates a symlink called `windows-home` that links to my Windows user directory. If I navigate inside, I get my Windows home directory! This process can be repeated for any directory you want.
 
 
-### Pimp My Command Line
+# Pimp My Command Line
 
 Now we get into the really fun stuff. These things will allow you to really customize your command line and make it your own.
 
