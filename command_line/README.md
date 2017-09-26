@@ -1,25 +1,33 @@
-# Intro to Command line
+# Intro to the Command Line
 
-The command line is a integral tool for development. If just want to look cool, open http://hackertyper.net/ and leave this workshop.
+Welcome to the BUILDS Command Line workshop! The goal of this workshop is to get you acquainted with the Unix-based command line, an extremely important and integral tool that will prove useful well beyond your academic career. Command line tools are used everywhere: from ``git`` to ``gsubmit`` and everything in between. It may look intimidating, and it can be a bit hard to learn, but it's well worth the time investment, especially if you work in software. If you just want to look like a ``l33t_h4x0r``, open http://hackertyper.net/ and type away.
 
-Let's learn basic navigation and file editing.
+**A few notes before we begin:**
 
-This repo contains some resources we'll need for this workshop so the first step is to clone this repo. You can open up a terminal and type:
+- With the addition of the Windows Subsystem for Linux, Windows PCs can now follow along with this tutorial! There is a bit of extra setup required, which can be found [here.](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) **Before doing this, ensure your installation is fully up-to-date, on build at least 1703.** Once this is set up, Windows users can follow along with the Linux instructions, as this system is essentially tantamount to running Ubuntu Linux. Any specific references to Windows computers will probably refer to quirks about this system (and there are a few).
+
+- The `$` is used to denote a shell prompt and should not be typed in.
+
+Let's get going! The first step is to find your terminal; on Mac and Linux, this should be the "Terminal" app. On Windows, you'll need to find the "Windows Subsystem for Linux" program (it should be in your program list). Open it up.
+
+This repo contains some resources we'll need, so the first step is to clone this repo using ``git``. You'll want to type:
 
 	$ git clone 
 
-Note the `$` is used to denote a shell prompt and should not be typed in.
+We'll start with basic navigation and file editing.
 
 ### Folder Structure
 
-Linux machines all have file paths that start from root or `/`, if you type in `pwd` you'll see the current working directory. Likely if you've just opened your shell you'll be in what's called the home directory.
+Linux machines all have file paths that start from root or `/`. If you type in `pwd` you'll see the current working directory. If you've just opened your shell you'll likely be in what's called the home directory.
 
 	$ pwd
 	/home/username
 
-This directory on mac is `/Users/[Username]` where `[Username]` is your username. On linux it's usually `/home/[username]`. Since the home directory is accessed a lot it's shortened to `~`. From now on we'll refer to folder as directory and we'll call your home directory `/home/username`. 
+This directory on a Mac is `/Users/[Username]` where `[Username]` is your username. On Linux it's usually `/home/[username]`.
 
-To see the files in the current directory just type `ls`, this lists files in your current working directory. You'll see the `command_line` folder we cloned earlier. You'll also see some of your own files:
+Since the home directory is accessed quite frequently, it's shortened to `~`. From now on we'll refer to folders as directores and we'll call your home directory `/home/username`. 
+
+To see the files in the current directory just type `ls`, this lists files in your current working directory. You may or may not have files in your home directory (if on Mac, you probably will). You'll see the `command_line` folder we cloned earlier. You'll also see some of your own files:
 
 	$ ls
 	command_line
