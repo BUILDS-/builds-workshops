@@ -294,8 +294,21 @@ Then you can just do (on Windows too):
 ## Install cowsay
 
 Install the following (already done on Windows):
+
 	install.packages("devtools")
 	devtools::install_github("sckott/cowsay")
+
+## Alternatively, use Homebrew for MacOS
+
+Install brew:
+
+	$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	
+And install lolcat, cowsay, and fortune with brew:
+
+	$ brew install lolcat
+	$ brew install cowsay
+	$ brew install fortune
 
 ## Putting it all together
 
