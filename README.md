@@ -16,3 +16,8 @@ We post workshop tutorials and resources in this directory. In the past we've do
 
 
 For more information, please visit our website at [http://builds.cc](http://builds.cc).
+
+
+
+Ghidra Workshop:
+https://crackmes.one/crackme/5b8a37a433c5d45fc286ad83
