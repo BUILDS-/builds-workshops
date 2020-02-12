@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-### Step 1: Go to (https://pages.github.com/)[https://pages.github.com/] and follow steps
+### Step 1: Go to https://pages.github.com/ and follow steps
 
 ### Step 2: Open this projects "repo" and copy the HTML file contents to your own
 
