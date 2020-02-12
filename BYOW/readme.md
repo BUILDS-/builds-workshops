@@ -6,12 +6,15 @@
 
 ### Step 2: Open this projects "repo" and copy the HTML file contents to your own
 
-### Step 3: add your HTML content!
+### Step 3: Get npm!
 
+Navigate to https://nodejs.org/en/ and install "NodeJS". It will allow you to later install a program for managing your website more easily.
 
+### Step 4: Download the Resume Tool
 
+npm install -g resume-cli
 
-### Step 4: Style it up!
+### Step 4: Customize the JSON! 
 
 ### Step 5: Set up cloudflare
 
