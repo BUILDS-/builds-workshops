@@ -2,7 +2,7 @@
 
 ## What is ReactJS?
 
-React is an open-source Javascript library that is used for building UI, specifically for handling the view layer for web and mobile apps. React is great for creating reusuble UI compoenents. 
+React is an open-source Javascript library that is used for building UI, specifically for handling the view layer for web and mobile apps. React is great for creating reusable UI components. 
 
 ### JSX 
 React uses JSX, which is Javascript that allows using HTML tag syntax.
@@ -11,7 +11,7 @@ React uses JSX, which is Javascript that allows using HTML tag syntax.
 ```
 
 ### Components
-Components let you divide the UI into smaller, reusuable pieces. They are like Javascript functions, where they accept any inputs (props) and return React elements.
+Components let you divide the UI into smaller, reusable pieces. They are like Javascript functions, where they accept any inputs (props) and return React elements.
 ```
 import React from 'react'; 
 
@@ -29,9 +29,9 @@ function App() {
   );
 }
 ```
-### Class Componenets vs Function Componenets
+### Class Components vs. Function Components
 
-In the last year, React has moved towards function componenets rather than class components. Both of the following components are equivelent in React's point of view. However, React as moving towards function components so we will use them in this tutorial.
+In the last year, React has moved towards function components rather than class components. Both of the following components are equivalent in React's point of view. However, React as moving towards function components so we will use them in this tutorial.
 ```
 class Welcome extends React.Component {
   render() {
@@ -48,9 +48,9 @@ function Welcome(props) {
 
 ### Props and State
 
-React Official Documenation:
+React Official Documentation:
 
-"props (short for “properties”) and state are both plain JavaScript objects. While both hold information that influences the output of render, they are different in one important way: props get passed to the component (similar to function parameters) whereas state is managed within the component (similar to variables declared within a fun"
+"props (short for "properties") and state are both plain JavaScript objects. While both hold information that influences the output of render, they are different in one important way: props get passed to the component (similar to function parameters) whereas state is managed within the component (similar to variables declared within a fun"
 
 https://github.com/uberVU/react-guide/blob/master/props-vs-state.md 
 
@@ -84,8 +84,8 @@ App.css: Main css file for application
 
 ## 3. Make a Button!
 
-1. In the src file, create a Componenets folder. This is where we will add files defining components. 
-2. In the Components folder, create a file called Button.js (all component files have to be capitilized)
+1. In the src file, create a Components folder. This is where we will add files defining components. 
+2. In the Components folder, create a file called Button.js (all component files have to be capitalized)
 3. Every component should have the following import:
 ```
 import React from 'react';
@@ -101,7 +101,7 @@ function Button(props){
 
 export default Button;
 ```
-5. Return a button HTML element (html tags are lowercase while components are capitlized) in Button.js
+5. Return a button HTML element (HTML tags are lowercase while components are capitalized) in Button.js
 
 ```
 import React from 'react';
@@ -158,7 +158,7 @@ export default App;
 ```
 > const [counter, setCounter] = useState(0);
 
-Here, we are creating a state called counter, and a funtion that we can call to change the value of counter, setCounter. We initialize the starting value to be 0.
+Here, we are creating a state called counter, and a function that we can call to change the value of counter, setCounter. We initialize the starting value to be 0.
 
   3. Render the value of counter
   
@@ -276,6 +276,3 @@ function Button(props){
 
 export default Button;
   ```
-  
-  
-
