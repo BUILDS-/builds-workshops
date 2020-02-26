@@ -6,6 +6,9 @@ React is an open-source Javascript library that is used for building UI, specifi
 
 ### JSX 
 React uses JSX, which is Javascript that allows using HTML tag syntax.
+```
+<h1>1 + 2 is equal to {1+2}</h1>
+```
 
 ### Components
 Components let you divide the UI into smaller, reusuable pieces. They are like Javascript functions, where they accept any inputs (props) and return React elements.
@@ -214,4 +217,65 @@ export default Button;
 ```
 
 ## 5. Styling in React
+
+  1. One way is to edit the CSS file App.css. If a component is using App.css, you have to import it. App.js already has it imported. Add the import line to Button.js
+```
+import React from 'react';
+import '../App.css';
+
+function Button(props){
+    return(
+        <button onClick= {props.increaseCounter}>Click Me!!</button>
+    )
+}
+
+export default Button;
+```
+In App.css, we can reference the text and Button:
+```
+.App h1{
+  color: blue;
+}
+Button{
+  color: white;
+  background-color: green;
+}
+```
+  2. Inline styling using the style attribute.
+  
+  In App.js:
+  ```
+  import React, {useState} from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Button from './Components/Button'
+
+function App() {
+  const [counter, setCounter] = useState(0);
+  return (
+    <div className="App">
+      <h1 style = {{color: "blue"}}>You have clicked the button {counter} times</h1>
+      <Button increaseCounter = {() => setCounter(counter + 1)}/>
+    </div>
+  );
+}
+
+export default App;
+```
+  
+  In Button.js:
+  ```
+  import React from 'react';
+import '../App.css';
+
+function Button(props){
+    return(
+        <button style = {{color: "white",backgroundColor: "green"}} onClick= {props.increaseCounter}>Click Me!!</button>
+    )
+}
+
+export default Button;
+  ```
+  
+  
 
