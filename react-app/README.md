@@ -54,8 +54,8 @@ https://github.com/uberVU/react-guide/blob/master/props-vs-state.md
 
 ## 1. Ensure you have Node.js
 
-node -v
-npm -v
+`node -v`
+`npm -v`
 
 If your computer doesn't have either, install node.js:
 https://nodejs.org/en/ 
@@ -63,10 +63,11 @@ https://nodejs.org/en/
 ## 2. Create React App
  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
-
+```
 npx create-react-app my-app
 cd my-app
 npm start
+```
 
 Note: the first command may take a while to execute
 
