@@ -43,7 +43,7 @@ function Welcome(props) {
 ```
 
 
-## Props and State
+### Props and State
 
 React Official Documenation:
 
@@ -87,9 +87,8 @@ App.css: Main css file for application
 ```
 import React from 'react';
 ```
-4. Create a function Button and export it
+4. Create a function Button and export it in Button.js
 
-Button.js
 ```
 import React from 'react';
 
@@ -99,9 +98,8 @@ function Button(props){
 
 export default Button;
 ```
-5. Return a button HTML element (html tags are lowercase while components are capitlized) 
+5. Return a button HTML element (html tags are lowercase while components are capitlized) in Button.js
 
-Button.js
 ```
 import React from 'react';
 
@@ -115,7 +113,6 @@ export default Button;
 ```
 6. Update App.js to render the Button
 
-App.js
 ```
 import React from 'react';
 import logo from './logo.svg';
@@ -133,6 +130,88 @@ function App() {
 export default App;
 ```
 ## 4. Make a Counter attached to the Button!
+
+ 1. In App.js, add the useState hook to the React import
+ ```
+ import React, {useState} from 'react';
+ ```
+ 2. Now initialize the state for the counter in App.js
+ 
+```
+import React, {useState} from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Button from './Components/Button'
+
+function App() {
+  const [counter, setCounter] = useState(0);
+  return (
+    <div className="App">
+      <Button/>
+    </div>
+  );
+}
+export default App;
+```
+> const [counter, setCounter] = useState(0);
+
+Here, we are creating a state called counter, and a funtion that we can call to change the value of counter, setCounter. We initialize the starting value to be 0.
+
+  3. Render the value of counter
+  
+  ```
+import React, {useState} from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Button from './Components/Button'
+
+function App() {
+  const [counter, setCounter] = useState(0);
+  return (
+    <div className="App">
+      <h1>You have clicked the button {counter} times</h1>
+      <Button/>
+    </div>
+  );
+}
+
+export default App;
+```
+4. Increase counter value onClick of Button
+
+We can define a property for Button to have a function that increases the counter. This is because Button.js does not have access to the counter state. Instead, we send a callBack function to Button.
+
+In App.js:
+```
+import React, {useState} from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Button from './Components/Button'
+
+function App() {
+  const [counter, setCounter] = useState(0);
+  return (
+    <div className="App">
+      <h1>You have clicked the button {counter} times</h1>
+      <Button increaseCounter = {() => setCounter(counter + 1)}/>
+    </div>
+  );
+}
+
+export default App;
+```
+In Button.js:
+```
+import React from 'react';
+
+function Button(props){
+    return(
+        <button onClick= {props.increaseCounter}>Click Me!!</button>
+    )
+}
+
+export default Button;
+```
 
 ## 5. Styling in React
 
