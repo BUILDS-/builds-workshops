@@ -54,8 +54,10 @@ https://github.com/uberVU/react-guide/blob/master/props-vs-state.md
 
 ## 1. Ensure you have Node.js
 
-`node -v`
-`npm -v`
+```
+node -v
+npm -v
+```
 
 If your computer doesn't have either, install node.js:
 https://nodejs.org/en/ 
@@ -79,7 +81,57 @@ App.css: Main css file for application
 
 ## 3. Make a Button!
 
+1. In the src file, create a Componenets folder. This is where we will add files defining components. 
+2. In the Components folder, create a file called Button.js (all component files have to be capitilized)
+3. Every component should have the following import:
+```
+import React from 'react';
+```
+4. Create a function Button and export it
 
+Button.js
+```
+import React from 'react';
+
+function Button(props){
+
+}
+
+export default Button;
+```
+5. Return a button HTML element (html tags are lowercase while components are capitlized) 
+
+Button.js
+```
+import React from 'react';
+
+function Button(props){
+    return(
+        <button>Click Me!!</button>
+    )
+}
+
+export default Button;
+```
+6. Update App.js to render the Button
+
+App.js
+```
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Button from './Components/Button'
+
+function App() {
+  return (
+    <div className="App">
+      <Button/>
+    </div>
+  );
+}
+
+export default App;
+```
 ## 4. Make a Counter attached to the Button!
 
 ## 5. Styling in React
