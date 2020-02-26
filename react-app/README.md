@@ -1,15 +1,15 @@
-#Learn React Workshop
+# Learn React Workshop
 
-##What is ReactJS?
+## What is ReactJS?
 
 React is an open-source Javascript library that is used for building UI, specifically for handling the view layer for web and mobile apps. React is great for creating reusuble UI compoenents. 
 
-###JSX 
+### JSX 
 React uses JSX, which is Javascript that allows using HTML tag syntax.
 
-###Components
+### Components
 Components let you divide the UI into smaller, reusuable pieces. They are like Javascript functions, where they accept any inputs (props) and return React elements.
-
+```
 import React from 'react'; 
 
 function Welcome(props) {
@@ -25,23 +25,25 @@ function App() {
     </div>
   );
 }
-
-###Class Componenets vs Function Componenets
+```
+### Class Componenets vs Function Componenets
 
 In the last year, React has moved towards function componenets rather than class components. Both of the following components are equivelent in React's point of view. However, React as moving towards function components so we will use them in this tutorial.
-
+```
 class Welcome extends React.Component {
   render() {
     return <h1>Hello, {this.props.name}</h1>;
   }
 }
-
+```
+```
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
+```
 
 
-##Props and State
+## Props and State
 
 React Official Documenation:
 
@@ -50,7 +52,7 @@ React Official Documenation:
 https://github.com/uberVU/react-guide/blob/master/props-vs-state.md 
 
 
-##1. Ensure you have Node.js
+## 1. Ensure you have Node.js
 
 node -v
 npm -v
@@ -58,7 +60,7 @@ npm -v
 If your computer doesn't have either, install node.js:
 https://nodejs.org/en/ 
 
-##2. Create React App
+## 2. Create React App
  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
@@ -68,16 +70,16 @@ npm start
 
 Note: the first command may take a while to execute
 
-###Anatomy of the Create React App:
+### Anatomy of the Create React App:
 
 index.js: the entrypoint to the application, which calls the "App" component. 
 App.js: Creates the "App" component and exports it 
 App.css: Main css file for application
 
-##3. Make a Button!
+## 3. Make a Button!
 
 
-##4. Make a Counter attached to the Button!
+## 4. Make a Counter attached to the Button!
 
-##5. Styling in React
+## 5. Styling in React
 
