@@ -1,0 +1,25 @@
+{
+  "intents": [
+    {
+      "intent": "NextRocket"
+    },
+    {
+      "intent": "RocketOnDate",
+      "slots": [
+        {
+          "name": "date",
+          "type": "AMAZON.DATE"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
