@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  flask-app:
+    image: docker-workshop
+    ports:
+      - 8080:8000
